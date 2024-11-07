@@ -1,0 +1,387 @@
+<html> 	<head> 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7250753558435816" crossorigin="anonymous"></script> 		<link rel="stylesheet" href="../layout.css"> 		<script type="text/javascript" src="../functions.js"></script> 		<script type="text/javascript" src="../Js0J1f/J1404.js"></script> 	</head> 	<body onkeydown='sP3f4();' oncontextmenu="return false" onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false" draggable="false" ondragstart="return false" ondrop="return false"> 		<div id = "container"> 			<div id = "titleBox"> JAVA 프로그래밍 </div> 			<div id = "navigationBox"><ol start=0><li><a href='../Jf0i/Jf0i0.html'>JAVA 프로그래밍 시작</a></li><li><a href='../Jf1i/Jf1i0.html'>출력</a></li><li><a href='../Jf2i/Jf2i0.html'>입력</a></li><li><a href='../Jf3i/Jf3i0.html'>변수</a></li><li><a href='../Jf4i/Jf4i0.html'>연산자</a></li><li><a href='../Jf5i/Jf5i0.html'>선택문(삼항연산자/switch)</a></li><li><a href='../Jf6i/Jf6i0.html'>선택문(if)</a></li><li><a href='../Jf7i/Jf7i0.html'>반복문(while)</a></li><li><a href='../Jf8i/Jf8i0.html'>반복문(for)</a></li><li><a href='../Jf9i/Jf9i0.html'>배열</a></li><li><a href='../Jg0i/Jg0i0.html'>문자열/컬렉션</a></li><li><a href='../Jg1i/Jg1i0.html'>클래스/패키지</a></li><li><a href='../Jg2i/Jg2i0.html'>상속/다형성</a></li><li><a href='../Jg3i/Jg3i0.html'>GUI기초</a></li><li><a href='../Jg4i/Jg4i0.html'>GUI응용</a></li><ul><li><a href='../Jg4i/Jg4i1.html'>캐릭터 이동</a></li><li><a href='../Jg4i/Jg4i2.html'>구슬찾기</a></li><li><a href='../Jg4i/Jg4i3.html'>가위바위보</a></li><li><a href='../Jg4i/Jg4i4.html'>리모컨-TV</a></li><ul><li><a href='Jg4i4.html'>코드읽기</a></li><li><a href='Jg4i4a.html'>알고리즘</a></li><li><a href='Jg4i4k.html'>키워드</a></li><li><a href='Jg4i4b.html'>빈칸채우기</a></li><li><a href='Jg4i4s.html'>실행순서</a></li><li><a href='Jg4i4m.html'>실행상태</a></li><li><a href='https://github.com/CodeReading101/JAVA/blob/main/Chapter14/RemoteControlTVGUI.java' target='code'>소스코드</a></li></ul><li><a href='../Jg4i/Jg4i5.html'>폭탄 피하기</a></li></ul><li><a href='../Jg5i/Jg5i0.html'>예외/쓰레드</a></li><li><a href='../Jg6i/Jg6i0.html'>파일입출력</a></li><li><a href='../Jg7i/Jg7i0.html'>네트워크(1:1)</a></li><li><a href='../Jg8i/Jg8i0.html'>네트워크(1:n)</a></li><li><a href='../Jg9i/Jg9i0.html'>열거형/제네릭</a></li><li><a href='../Jh0i/Jh0i0.html'>재귀함수</a></li></ol></div>  			<div id = "contentBox"> 				<h4>문제</h4> 				<pre style='white-space:normal;'>리모컨으로 제어하는 TV 프로그램의 GUI 문제입니다 이를 해결하는 다음 프로그램을 해석하세요 </pre> 				
+<img src = "https://shyprogrammer351.github.io/ig3i/remoteControl/RC_GUI_TV_013.jpg" >
+<pre> 
+</pre><br> 	  				<h4>알고리즘</h4> 				<pre style='white-space:normal;'> 리모컨 GUI 초기화 <br> &nbsp; &nbsp;전원, 상, 하, 좌, 우 버튼의 이미지 및 리스너 초기화 <br> <br> 리모컨 버튼을 클릭시 가전제품 상태 업데이트 <br> &nbsp; &nbsp;TV 리모컨에서 전원 버튼을 누르면 전원 상태 변경 <br> &nbsp; &nbsp;TV 리모컨에서 상(△) 버튼을 누르면 채널 번호 증가 <br> &nbsp; &nbsp;TV 리모컨에서 하(▽) 버튼을 누르면 채널 번호 감소 <br> &nbsp; &nbsp;TV 리모컨에서 좌(◁) 버튼을 누르면 음량 감소 <br> &nbsp; &nbsp;TV 리모컨에서 우(▷) 버튼을 누르면 음량 증가 <br> <br> TV 화면 초기화 <br> &nbsp; &nbsp;채널 이미지 준비 <br> &nbsp; &nbsp;음량 이미지 준비 <br></pre> 		 				<br><h4>프로그램 코드 <input id='btn' type='button' value='실행순서 및 메모리상태 확인' onclick='sP3f5();'/></h4>  				<div id = "codeBox">
+<pre id="codeE001" class="unselectable codeClass">E001		<font color="green">// POWER를 선택</font>
+</pre>
+<pre id="codeE002" class="unselectable codeClass">E002		<font color="green">// UP을 선택</font>
+</pre>
+<pre id="codeE003" class="unselectable codeClass">E003		<font color="green">// DOWN을 선택</font>
+</pre>
+<pre id="codeE004" class="unselectable codeClass">E004		<font color="green">// LEFT를 선택</font>
+</pre>
+<pre id="codeE005" class="unselectable codeClass">E005		<font color="green">// RIGHT를 선택</font>
+</pre>
+<pre id="codeE006" class="unselectable codeClass">E006		<font color="green">// POWER를 선택</font>
+</pre>
+<pre id="codeE007" class="unselectable codeClass">E007		<font color="green">// 프로그램 닫기(우측상단 X) 선택</font>
+</pre><pre id="code0" class="unselectable codeClass"> 
+</pre><pre id="code0" class="unselectable codeClass">	<font color="green">// 파일명 : ./Chapter14/RemoteControlTVGUI.java</font>
+</pre><pre id="code0" class="unselectable codeClass">	import java.awt.*;
+</pre><pre id="code0" class="unselectable codeClass">	import javax.swing.JFrame;
+</pre><pre id="code0" class="unselectable codeClass">	import remoteControl.RemoteControllerPanel;
+</pre><pre id="code0" class="unselectable codeClass">	import remoteControl.TVPanel;
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">	<font color="green">/************** </font>
+</pre><pre id="code0" class="unselectable codeClass">	 <font color="green">* 리모컨으로 제어하는 TV 프로그램의 GUI 버전</font>
+</pre><pre id="code0" class="unselectable codeClass">	 <font color="green">* @author So Young Park</font>
+</pre><pre id="code0" class="unselectable codeClass">	 <font color="green">* @version 0.8</font>
+</pre><pre id="code0" class="unselectable codeClass">	 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">	public <a href='../Jf1i/Jf1i0.html' target='keyword'>class</a> RemoteControlTVGUI
+</pre><pre id="code0" class="unselectable codeClass">	{
+</pre>
+<pre id="codeM1b" class="unselectable codeClass">M1b		public static void main( String[] args )
+</pre><pre id="code0" class="unselectable codeClass">		{
+</pre><pre id="code0" class="unselectable codeClass">			final String imagePath = "C:\\Users\\user\\Downloads\\JAVA-main\\src\\remoteControl\\image\\";
+</pre>
+<pre id="codeM11" class="unselectable codeClass">M11			TVPanel appliance =
+</pre>
+<pre id="codeM12" class="unselectable codeClass">M12			                new TVPanel( imagePath );
+</pre>
+<pre id="codeM13" class="unselectable codeClass">M13			RemoteControllerPanel remoteController =
+</pre>
+<pre id="codeM14" class="unselectable codeClass">M14			                        new RemoteControllerPanel( appliance, imagePath );
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">			JFrame frame = new JFrame( "TV" );
+</pre><pre id="code0" class="unselectable codeClass">			frame.setLayout( new BorderLayout() );
+</pre><pre id="code0" class="unselectable codeClass">			frame.add( appliance, BorderLayout.EAST );
+</pre><pre id="code0" class="unselectable codeClass">			frame.add( remoteController, BorderLayout.WEST );
+</pre><pre id="code0" class="unselectable codeClass">			frame.setPreferredSize( new Dimension( 600,170 ) );
+</pre><pre id="code0" class="unselectable codeClass">			frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+</pre><pre id="code0" class="unselectable codeClass">			frame.pack();
+</pre><pre id="code0" class="unselectable codeClass">			frame.setVisible( true );
+</pre>
+<pre id="codeM15" class="unselectable codeClass">M15			<font color="green">// 이벤트 발생시 처리 준비중</font>
+</pre>
+<pre id="codeM1e" class="unselectable codeClass">M1e		}
+</pre><pre id="code0" class="unselectable codeClass">	}
+</pre><pre id="code0" class="unselectable codeClass">			 
+</pre><pre id="code0" class="unselectable codeClass">	<font color="green">// 파일명 : ./src/remoteControl/RemoteControllerPanel.java</font>
+</pre><pre id="code0" class="unselectable codeClass">	package remoteControl;
+</pre><pre id="code0" class="unselectable codeClass">	import javax.swing.*;
+</pre><pre id="code0" class="unselectable codeClass">	import java.awt.*;
+</pre><pre id="code0" class="unselectable codeClass">	import java.awt.event.*;
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">	<font color="green">/** </font>
+</pre><pre id="code0" class="unselectable codeClass">	 <font color="green">* 리모컨 GUI 클래스</font>
+</pre><pre id="code0" class="unselectable codeClass">	 <font color="green">* @author So Young Park</font>
+</pre><pre id="code0" class="unselectable codeClass">	 <font color="green">* @version 0.8</font>
+</pre><pre id="code0" class="unselectable codeClass">	 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">	public <a href='../Jf1i/Jf1i0.html' target='keyword'>class</a> RemoteControllerPanel extends JPanel implements ActionListener
+</pre><pre id="code0" class="unselectable codeClass">	{
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 가전제품 : TV, 에어콘, 로봇청소기</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">		protected RemoteControl appliance;
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 리모컨 버튼 : 전원 및 상하좌우 버튼</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">		protected JButton[] button;
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 전원 버튼</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">		public final static int POWER = 0;
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 상(△) 버튼</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">		public final static int UP = 1;
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 하(▽) 버튼</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">		public final static int DOWN = 2;
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 좌(◁) 버튼</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">		public final static int LEFT = 3;
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 우(▷) 버튼</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">		public final static int RIGHT = 4;
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 가전제품을 제어하는 리모컨 GUI 초기화</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* @param appliance 가전제품 : TV, 에어콘, 로봇청소기</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre>
+<pre id="codeR1b" class="unselectable codeClass">R1b		public RemoteControllerPanel( RemoteControl appliance, final String imgPath )
+</pre><pre id="code0" class="unselectable codeClass">		{
+</pre>
+<pre id="codeR11" class="unselectable codeClass">R11			this( imgPath );
+</pre><pre id="code0" class="unselectable codeClass">			this.appliance = appliance;
+</pre>
+<pre id="codeR1e" class="unselectable codeClass">R1e		}
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* <b> 리모컨 GUI 초기화 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre>
+<pre id="codeR2b" class="unselectable codeClass">R2b		public RemoteControllerPanel( final String imgPath )
+</pre><pre id="code0" class="unselectable codeClass">		{
+</pre><pre id="code0" class="unselectable codeClass">			this.appliance = null;
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 전원, 상, 하, 좌, 우 버튼의 이미지 및 리스너 초기화 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">			final String[] strButton = { "power.gif", "up.gif", "down.gif", "left.gif", "right.gif" };
+</pre><pre id="code0" class="unselectable codeClass">			button = new JButton[strButton.length];
+</pre><pre id="code0" class="unselectable codeClass">			for ( int i = 0; i &lt; strButton.length; i++ )
+</pre><pre id="code0" class="unselectable codeClass">			{
+</pre><pre id="code0" class="unselectable codeClass">				button[i] = new JButton( new ImageIcon( new ImageIcon( imgPath + strButton[i] ).getImage().getScaledInstance( 30, 30, Image.SCALE_SMOOTH ) ) );
+</pre><pre id="code0" class="unselectable codeClass">				button[i].addActionListener( this );
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre>
+<pre id="codeR21" class="unselectable codeClass">R21			this.setPreferredSize( new Dimension( 240, 120 ) );
+</pre><pre id="code0" class="unselectable codeClass">			this.setLayout( new BorderLayout() );
+</pre><pre id="code0" class="unselectable codeClass">			this.add( button[POWER], BorderLayout.CENTER );
+</pre><pre id="code0" class="unselectable codeClass">			this.add( button[UP   ], BorderLayout.NORTH );
+</pre><pre id="code0" class="unselectable codeClass">			this.add( button[DOWN ], BorderLayout.SOUTH );
+</pre><pre id="code0" class="unselectable codeClass">			this.add( button[LEFT ], BorderLayout.WEST );
+</pre><pre id="code0" class="unselectable codeClass">			this.add( button[RIGHT], BorderLayout.EAST );
+</pre>
+<pre id="codeR2e" class="unselectable codeClass">R2e		}
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* <b> 리모컨 버튼을 클릭시 가전제품 상태 업데이트	</b></font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* @param ActionEvent e : 이벤트</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* @return 없음</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">		@Override
+</pre>
+<pre id="codeR3b" class="unselectable codeClass">R3b		public void actionPerformed( ActionEvent event )
+</pre><pre id="code0" class="unselectable codeClass">		{
+</pre><pre id="code0" class="unselectable codeClass">			if ( ( event.getSource() == button[POWER] ) && ( appliance != null ) )
+</pre>
+<pre id="codeR31" class="unselectable codeClass">R31				appliance.clickPower();
+</pre><pre id="code0" class="unselectable codeClass">			else if ( ( event.getSource() == button[UP] ) && ( appliance != null ) )
+</pre>
+<pre id="codeR32" class="unselectable codeClass">R32				appliance.clickUp();
+</pre><pre id="code0" class="unselectable codeClass">			else if ( ( event.getSource() == button[DOWN] ) && ( appliance != null ) )
+</pre>
+<pre id="codeR33" class="unselectable codeClass">R33				appliance.clickDown();
+</pre><pre id="code0" class="unselectable codeClass">			else if ( ( event.getSource() == button[LEFT] ) && ( appliance != null ) )
+</pre>
+<pre id="codeR34" class="unselectable codeClass">R34				appliance.clickLeft();
+</pre><pre id="code0" class="unselectable codeClass">			else if ( ( event.getSource() == button[RIGHT] ) && ( appliance != null ) )
+</pre>
+<pre id="codeR35" class="unselectable codeClass">R35				appliance.clickRight();
+</pre>
+<pre id="codeR3e" class="unselectable codeClass">R3e		}
+</pre><pre id="code0" class="unselectable codeClass">	}
+</pre><pre id="code0" class="unselectable codeClass"> 
+</pre><pre id="code0" class="unselectable codeClass"> 
+</pre><pre id="code0" class="unselectable codeClass">	<font color="green">// 파일명 : ./src/remoteControl/TVPanel.java</font>
+</pre><pre id="code0" class="unselectable codeClass">	package remoteControl;
+</pre><pre id="code0" class="unselectable codeClass">	import java.awt.*;
+</pre><pre id="code0" class="unselectable codeClass">	import javax.swing.*;
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">	<font color="green">/** </font>
+</pre><pre id="code0" class="unselectable codeClass">	 <font color="green">* 리모컨으로 제어하는 TV 클래스</font>
+</pre><pre id="code0" class="unselectable codeClass">	 <font color="green">* @author So Young Park</font>
+</pre><pre id="code0" class="unselectable codeClass">	 <font color="green">* @version 0.8</font>
+</pre><pre id="code0" class="unselectable codeClass">	 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">	public <a href='../Jf1i/Jf1i0.html' target='keyword'>class</a> TVPanel extends JPanel implements RemoteControl
+</pre><pre id="code0" class="unselectable codeClass">	{
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/**  </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* TV 전원</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">		private boolean power;
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/**  </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 채널 번호</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">		private int channel;
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/**  </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 채널별 이미지 모음 : EBS, SBS, KBS, MBC</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">		private ImageIcon[] imgChannel;
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/**  </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 채널 선택 결과를 이미지로 표현</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">		private JLabel lblChannel;
+</pre><pre id="code0" class="unselectable codeClass"> 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/**  </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 음량</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">		private int volume;
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/**  </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 음량별 이미지 모음 : 음량0, 음량1, 음량2, 음량3</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">		private ImageIcon[] imgVolume;
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/**  </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 음량 선택 결과를 이미지로 표현</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">		private JLabel lblVolume;
+</pre><pre id="code0" class="unselectable codeClass">		 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* <b> TV 화면 초기화 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre>
+<pre id="codeP1b" class="unselectable codeClass">P1b		public TVPanel( final String imgPath )
+</pre><pre id="code0" class="unselectable codeClass">		{
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 채널 이미지 준비 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">			final String[] channelFile = { "EBS.gif", "SBS.gif", "KBS.gif", "MBC.gif", "blank.gif" };
+</pre><pre id="code0" class="unselectable codeClass">			imgChannel = new ImageIcon[channelFile.length];
+</pre><pre id="code0" class="unselectable codeClass">			for ( int i = 0; i &lt; channelFile.length; i++ )
+</pre><pre id="code0" class="unselectable codeClass">			{
+</pre><pre id="code0" class="unselectable codeClass">				imgChannel[i] = new ImageIcon( new ImageIcon( imgPath + channelFile[i] ).getImage().getScaledInstance( 250, 120, Image.SCALE_SMOOTH ) );
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre><pre id="code0" class="unselectable codeClass">			 
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 음량 이미지 준비 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">			final String[] volumeFile = { "volume0.gif", "volume1.gif", "volume2.gif", "volume3.gif" };
+</pre><pre id="code0" class="unselectable codeClass">			imgVolume = new ImageIcon[volumeFile.length];
+</pre><pre id="code0" class="unselectable codeClass">			for ( int i = 0; i &lt; volumeFile.length; i++ )
+</pre><pre id="code0" class="unselectable codeClass">			{
+</pre><pre id="code0" class="unselectable codeClass">				imgVolume[i] = new ImageIcon( new ImageIcon( imgPath + volumeFile[i] ).getImage().getScaledInstance( 80, 120, Image.SCALE_SMOOTH ) );
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre><pre id="code0" class="unselectable codeClass"> 
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">// 준비한 이미지를 바탕으로 채널 및 음량 초기화</font>
+</pre>
+<pre id="codeP11" class="unselectable codeClass">P11			power = OFF;
+</pre><pre id="code0" class="unselectable codeClass">			channel = imgChannel.length - 1;
+</pre><pre id="code0" class="unselectable codeClass">			volume = 0;
+</pre><pre id="code0" class="unselectable codeClass">			lblChannel = new JLabel( imgChannel[channel] );
+</pre><pre id="code0" class="unselectable codeClass">			lblVolume =  new JLabel( imgVolume[volume] );
+</pre><pre id="code0" class="unselectable codeClass">			add( lblChannel );
+</pre><pre id="code0" class="unselectable codeClass">			add( lblVolume );
+</pre>
+<pre id="codeP1e" class="unselectable codeClass">P1e		}
+</pre><pre id="code0" class="unselectable codeClass">		 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* <b> TV 리모컨에서 전원 버튼을 누르면 전원 상태 변경 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre>
+<pre id="codeP2b" class="unselectable codeClass">P2b		public String clickPower()
+</pre><pre id="code0" class="unselectable codeClass">		{
+</pre><pre id="code0" class="unselectable codeClass">			if( power == OFF )
+</pre><pre id="code0" class="unselectable codeClass">			{
+</pre><pre id="code0" class="unselectable codeClass">				power = ON;
+</pre><pre id="code0" class="unselectable codeClass">				channel = 0;
+</pre><pre id="code0" class="unselectable codeClass">				volume = 1;
+</pre><pre id="code0" class="unselectable codeClass">				lblChannel.setIcon( imgChannel[channel] );
+</pre><pre id="code0" class="unselectable codeClass">				lblVolume.setIcon( imgVolume[volume] );
+</pre><pre id="code0" class="unselectable codeClass">				return "전원을 켭니다";
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre><pre id="code0" class="unselectable codeClass">			else
+</pre><pre id="code0" class="unselectable codeClass">			{
+</pre><pre id="code0" class="unselectable codeClass">				power = OFF;
+</pre><pre id="code0" class="unselectable codeClass">				channel = imgChannel.length - 1;
+</pre><pre id="code0" class="unselectable codeClass">				volume = 0;
+</pre><pre id="code0" class="unselectable codeClass">				lblChannel.setIcon( imgChannel[channel] );
+</pre><pre id="code0" class="unselectable codeClass">				lblVolume.setIcon( imgVolume[volume] );
+</pre><pre id="code0" class="unselectable codeClass">				return "전원을 끕니다";
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre>
+<pre id="codeP2e" class="unselectable codeClass">P2e		}
+</pre><pre id="code0" class="unselectable codeClass">		 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* <b> TV 리모컨에서 상(△) 버튼을 누르면 채널 번호 증가 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre>
+<pre id="codeP3b" class="unselectable codeClass">P3b		public String clickUp()
+</pre><pre id="code0" class="unselectable codeClass">		{
+</pre><pre id="code0" class="unselectable codeClass">			if( power == ON )
+</pre><pre id="code0" class="unselectable codeClass">			{
+</pre><pre id="code0" class="unselectable codeClass">				channel = ( channel + 1 ) % ( imgChannel.length - 1 );
+</pre><pre id="code0" class="unselectable codeClass">				lblChannel.setIcon( imgChannel[channel] );
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre><pre id="code0" class="unselectable codeClass">			 
+</pre><pre id="code0" class="unselectable codeClass">			return "현재 채널은 " + ( channel ) + "번입니다";
+</pre>
+<pre id="codeP3e" class="unselectable codeClass">P3e		}
+</pre><pre id="code0" class="unselectable codeClass">		 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* <b> TV 리모컨에서 하(▽) 버튼을 누르면 채널 번호 감소 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre>
+<pre id="codeP4b" class="unselectable codeClass">P4b		public String clickDown()
+</pre><pre id="code0" class="unselectable codeClass">		{
+</pre><pre id="code0" class="unselectable codeClass">			if( power == ON )
+</pre><pre id="code0" class="unselectable codeClass">			{
+</pre><pre id="code0" class="unselectable codeClass">				channel = ( channel + ( imgChannel.length - 2 ) ) % ( imgChannel.length - 1 );
+</pre><pre id="code0" class="unselectable codeClass">				lblChannel.setIcon( imgChannel[channel] );
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre><pre id="code0" class="unselectable codeClass">			 
+</pre><pre id="code0" class="unselectable codeClass">			return "현재 채널은 " + ( channel ) + "번입니다";
+</pre>
+<pre id="codeP4e" class="unselectable codeClass">P4e		}
+</pre><pre id="code0" class="unselectable codeClass">		 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* <b> TV 리모컨에서 좌(◁) 버튼을 누르면 음량 감소 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre>
+<pre id="codeP5b" class="unselectable codeClass">P5b		public String clickLeft()
+</pre><pre id="code0" class="unselectable codeClass">		{
+</pre><pre id="code0" class="unselectable codeClass">			if( power == ON )
+</pre><pre id="code0" class="unselectable codeClass">			{
+</pre><pre id="code0" class="unselectable codeClass">				volume = ( volume + ( imgVolume.length - 1 ) ) % imgVolume.length;
+</pre><pre id="code0" class="unselectable codeClass">				lblVolume.setIcon( imgVolume[volume] );
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre><pre id="code0" class="unselectable codeClass">			 
+</pre><pre id="code0" class="unselectable codeClass">			return "현재 음량은 " + ( volume ) + "입니다";
+</pre>
+<pre id="codeP5e" class="unselectable codeClass">P5e		}
+</pre><pre id="code0" class="unselectable codeClass">		 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* <b> TV 리모컨에서 우(▷) 버튼을 누르면 음량 증가 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre>
+<pre id="codeP6b" class="unselectable codeClass">P6b		public String clickRight()
+</pre><pre id="code0" class="unselectable codeClass">		{
+</pre><pre id="code0" class="unselectable codeClass">			if( power == ON )
+</pre><pre id="code0" class="unselectable codeClass">			{
+</pre><pre id="code0" class="unselectable codeClass">				volume = ( volume + 1 ) % imgVolume.length;
+</pre><pre id="code0" class="unselectable codeClass">				lblVolume.setIcon( imgVolume[volume] );
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre><pre id="code0" class="unselectable codeClass">			 
+</pre><pre id="code0" class="unselectable codeClass">			return "현재 음량은 " + ( volume ) + "입니다";
+</pre>
+<pre id="codeP6e" class="unselectable codeClass">P6e		}
+</pre><pre id="code0" class="unselectable codeClass">	}
+</pre><pre id="code0" class="unselectable codeClass"> 
+</pre><pre id="code0" class="unselectable codeClass"> 
+</pre><pre id="code0" class="unselectable codeClass">	<font color="green">// 파일명 : ./src/remoteControl/RemoteControl.java</font>
+</pre><pre id="code0" class="unselectable codeClass">	package remoteControl;
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">	<font color="green">/** </font>
+</pre><pre id="code0" class="unselectable codeClass">	 <font color="green">* 전원, 상, 하, 좌, 우 버튼이 있는 리모컨</font>
+</pre><pre id="code0" class="unselectable codeClass">	 <font color="green">* @author So Young Park</font>
+</pre><pre id="code0" class="unselectable codeClass">	 <font color="green">* @version 0.8</font>
+</pre><pre id="code0" class="unselectable codeClass">	 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">	public interface RemoteControl
+</pre><pre id="code0" class="unselectable codeClass">	{
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 전원 버튼 켜짐(ON) 상태 관련 상수</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">		public final boolean ON = true;
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 전원 버튼 꺼짐(OFF) 상태 관련 상수</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">		public final boolean OFF = false;
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 리모컨에서 전원버튼 눌렀을 때 작동</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* @return 리모컨 조정 후 가전제품 상태</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">		public String clickPower();
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 리모컨에서 상(△) 버튼을 눌렀을 때 작동</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* @return 리모컨 조정 후 가전제품 상태</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">		public String clickUp();
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 리모컨에서 하(▽) 버튼을 눌렀을 때 작동</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* @return 리모컨 조정 후 가전제품 상태</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">		public String clickDown();
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 리모컨에서 좌(◁) 버튼을 눌렀을 때 작동</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* @return 리모컨 조정 후 가전제품 상태</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">		public String clickLeft();
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 리모컨에서 우(▷) 버튼을 눌렀을 때 작동</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* @return 리모컨 조정 후 가전제품 상태</font>
+</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">		public String clickRight();
+</pre><pre id="code0" class="unselectable codeClass">	}
+</pre></div>	 	 				<br><h4>실행 순서</h4> 				<pre id = "sP3d4" style='white-space:normal; width:800px;'> </pre> 				<pre style='white-space:normal;'> 					※ 실행순서 및 메모리상태는 A키(이전) 및 D키(다음)를 눌러도 확인할 수 있습니다  				</pre> 				<br><br><br><br><br><br><br><br> &nbsp;  			</div> 			<div id = "floatingBox" style = "top:200px;left:900px;margin:0px;padding:0px;"> 				<pre id = "outputBox" class ="outputBox" style = "color:White;height:0px;width:0px;padding:0px;margin:0px;"></pre>  				<div id = "intermediateResult"> 					<img id = "sP3d7"> 					<table style = "border-spacing:0px;margin:0px;table-layout:auto;"> 						<tbody id = "sP3d8"></tbody> 					</table> 				</div> 			</div> 		</div> 	</body> </html> 

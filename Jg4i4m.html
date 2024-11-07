@@ -1,0 +1,228 @@
+<!DOCTYPE html> <html> 	<head> 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7250753558435816" crossorigin="anonymous"></script> 		<link rel="stylesheet" href="../layout.css"> 		<script type="text/javascript" src="../functions.js"></script> 		<script> 			const sP3d10 = [ ["1"], [ "2"], [ "3"], [ "4"], [ "6"], 							]; 		</script> 	</head> 	<body oncontextmenu="return false" onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false" draggable="false" ondragstart="return false" ondrop="return false"> 		<div id = "container"> 			<div id = "titleBox"> JAVA 프로그래밍 </div> 			<div id = "navigationBox"><ol start=0><li><a href='../Jf0i/Jf0i0.html'>JAVA 프로그래밍 시작</a></li><li><a href='../Jf1i/Jf1i0.html'>출력</a></li><li><a href='../Jf2i/Jf2i0.html'>입력</a></li><li><a href='../Jf3i/Jf3i0.html'>변수</a></li><li><a href='../Jf4i/Jf4i0.html'>연산자</a></li><li><a href='../Jf5i/Jf5i0.html'>선택문(삼항연산자/switch)</a></li><li><a href='../Jf6i/Jf6i0.html'>선택문(if)</a></li><li><a href='../Jf7i/Jf7i0.html'>반복문(while)</a></li><li><a href='../Jf8i/Jf8i0.html'>반복문(for)</a></li><li><a href='../Jf9i/Jf9i0.html'>배열</a></li><li><a href='../Jg0i/Jg0i0.html'>문자열/컬렉션</a></li><li><a href='../Jg1i/Jg1i0.html'>클래스/패키지</a></li><li><a href='../Jg2i/Jg2i0.html'>상속/다형성</a></li><li><a href='../Jg3i/Jg3i0.html'>GUI기초</a></li><li><a href='../Jg4i/Jg4i0.html'>GUI응용</a></li><ul><li><a href='../Jg4i/Jg4i1.html'>캐릭터 이동</a></li><li><a href='../Jg4i/Jg4i2.html'>구슬찾기</a></li><li><a href='../Jg4i/Jg4i3.html'>가위바위보</a></li><li><a href='../Jg4i/Jg4i4.html'>리모컨-TV</a></li><ul><li><a href='Jg4i4.html'>코드읽기</a></li><li><a href='Jg4i4a.html'>알고리즘</a></li><li><a href='Jg4i4k.html'>키워드</a></li><li><a href='Jg4i4b.html'>빈칸채우기</a></li><li><a href='Jg4i4s.html'>실행순서</a></li><li><a href='Jg4i4m.html'>실행상태</a></li><li><a href='https://github.com/CodeReading101/JAVA/blob/main/Chapter14/RemoteControlTVGUI.java' target='code'>소스코드</a></li></ul><li><a href='../Jg4i/Jg4i5.html'>폭탄 피하기</a></li></ul><li><a href='../Jg5i/Jg5i0.html'>예외/쓰레드</a></li><li><a href='../Jg6i/Jg6i0.html'>파일입출력</a></li><li><a href='../Jg7i/Jg7i0.html'>네트워크(1:1)</a></li><li><a href='../Jg8i/Jg8i0.html'>네트워크(1:n)</a></li><li><a href='../Jg9i/Jg9i0.html'>열거형/제네릭</a></li><li><a href='../Jh0i/Jh0i0.html'>재귀함수</a></li></ol></div>  			<div id = "contentBox"> 				<h4>문제</h4> 				<pre style='white-space:normal;'>리모컨으로 제어하는 TV 프로그램의 GUI 문제입니다 이를 해결하는 다음 프로그램의 실행상태를 확인하세요 </pre> 				
+<img src = "https://shyprogrammer351.github.io/ig3i/remoteControl/RC_GUI_TV_013.jpg" >
+<pre> 
+</pre><br> 	   				<h4>프로그램 코드</h4> 				<pre>	import java.awt.*;
+	import javax.swing.JFrame;
+	import remoteControl.RemoteControllerPanel;
+	import remoteControl.TVPanel;
+	
+	public class RemoteControlTVGUI
+	{
+<a href='javascript:history.back();' name='M1b'>M1b</a>		public static void main( String[] args ) 
+		{
+			final String imagePath = "C:\\Users\\user\\Downloads\\JAVA-main\\src\\remoteControl\\image\\";
+<a href='javascript:history.back();' name='M11'>M11</a>			TVPanel appliance = 
+<a href='javascript:history.back();' name='M12'>M12</a>			                new TVPanel( imagePath );
+<a href='javascript:history.back();' name='M13'>M13</a>			RemoteControllerPanel remoteController = 
+<a href='javascript:history.back();' name='M14'>M14</a>			                        new RemoteControllerPanel( appliance, imagePath );
+	
+			JFrame frame = new JFrame( "TV" );
+			frame.setLayout( new BorderLayout() );     
+			frame.add( appliance, BorderLayout.EAST );
+			frame.add( remoteController, BorderLayout.WEST );
+			frame.setPreferredSize( new Dimension( 600,170 ) );
+			frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+			frame.pack();
+			frame.setVisible( true );
+<a href='javascript:history.back();' name='M15'>M15</a>			// 이벤트 발생시 처리 준비중
+<a href='javascript:history.back();' name='M1e'>M1e</a>		}
+	}
+			
+	package remoteControl;
+	import javax.swing.*;
+	import java.awt.*;
+	import java.awt.event.*;
+	
+	
+	
+	public class RemoteControllerPanel extends JPanel implements ActionListener 
+	{
+		protected RemoteControl appliance;
+		protected JButton[] button;	
+		public final static int POWER = 0;
+		public final static int UP = 1;
+		public final static int DOWN = 2;
+		public final static int LEFT = 3;
+		public final static int RIGHT = 4;
+	
+<a href='javascript:history.back();' name='R1b'>R1b</a>		public RemoteControllerPanel( RemoteControl appliance, final String imgPath )
+		{
+<a href='javascript:history.back();' name='R11'>R11</a>			this( imgPath );
+			this.appliance = appliance;
+<a href='javascript:history.back();' name='R1e'>R1e</a>		}
+	
+<a href='javascript:history.back();' name='R2b'>R2b</a>		public RemoteControllerPanel( final String imgPath )					  
+		{
+			this.appliance = null;
+	
+			final String[] strButton = { "power.gif", "up.gif", "down.gif", "left.gif", "right.gif" };
+			button = new JButton[strButton.length];
+			for ( int i = 0; i &lt; strButton.length; i++ )
+			{
+				button[i] = new JButton( new ImageIcon( new ImageIcon( imgPath + strButton[i] ).getImage().getScaledInstance( 30, 30, Image.SCALE_SMOOTH ) ) );
+				button[i].addActionListener( this ); 
+			}
+	
+<a href='javascript:history.back();' name='R21'>R21</a>			this.setPreferredSize( new Dimension( 240, 120 ) );		
+			this.setLayout( new BorderLayout() );
+			this.add( button[POWER], BorderLayout.CENTER );
+			this.add( button[UP   ], BorderLayout.NORTH );
+			this.add( button[DOWN ], BorderLayout.SOUTH );
+			this.add( button[LEFT ], BorderLayout.WEST );
+			this.add( button[RIGHT], BorderLayout.EAST );   
+<a href='javascript:history.back();' name='R2e'>R2e</a>		} 					
+	
+		@Override
+<a href='javascript:history.back();' name='R3b'>R3b</a>		public void actionPerformed( ActionEvent event )
+		{
+			if ( ( event.getSource() == button[POWER] ) && ( appliance != null ) )
+<a href='javascript:history.back();' name='R31'>R31</a>				appliance.clickPower();
+			else if ( ( event.getSource() == button[UP] ) && ( appliance != null ) )
+<a href='javascript:history.back();' name='R32'>R32</a>				appliance.clickUp();
+			else if ( ( event.getSource() == button[DOWN] ) && ( appliance != null ) )
+<a href='javascript:history.back();' name='R33'>R33</a>				appliance.clickDown();
+			else if ( ( event.getSource() == button[LEFT] ) && ( appliance != null ) )
+<a href='javascript:history.back();' name='R34'>R34</a>				appliance.clickLeft();
+			else if ( ( event.getSource() == button[RIGHT] ) && ( appliance != null ) )
+<a href='javascript:history.back();' name='R35'>R35</a>				appliance.clickRight();
+<a href='javascript:history.back();' name='R3e'>R3e</a>		}	
+	}
+	package remoteControl;
+	import java.awt.*;
+	import javax.swing.*;
+	
+	public class TVPanel extends JPanel implements RemoteControl 
+	{
+		private boolean power;
+		private int channel;
+	
+		private ImageIcon[] imgChannel;
+		private JLabel lblChannel;
+		private int volume;
+		private ImageIcon[] imgVolume;		
+		private JLabel lblVolume;
+		
+<a href='javascript:history.back();' name='P1b'>P1b</a>		public TVPanel( final String imgPath ) 
+		{
+			final String[] channelFile = { "EBS.gif", "SBS.gif", "KBS.gif", "MBC.gif", "blank.gif" };	
+			imgChannel = new ImageIcon[channelFile.length];
+			for ( int i = 0; i &lt; channelFile.length; i++ )
+			{
+				imgChannel[i] = new ImageIcon( new ImageIcon( imgPath + channelFile[i] ).getImage().getScaledInstance( 250, 120, Image.SCALE_SMOOTH ) );
+			}
+			
+			final String[] volumeFile = { "volume0.gif", "volume1.gif", "volume2.gif", "volume3.gif" };	
+			imgVolume = new ImageIcon[volumeFile.length];
+			for ( int i = 0; i &lt; volumeFile.length; i++ )
+			{
+				imgVolume[i] = new ImageIcon( new ImageIcon( imgPath + volumeFile[i] ).getImage().getScaledInstance( 80, 120, Image.SCALE_SMOOTH ) );
+			}
+<a href='javascript:history.back();' name='P11'>P11</a>			power = OFF;
+			channel = imgChannel.length - 1;
+			volume = 0;			
+			lblChannel = new JLabel( imgChannel[channel] );
+			lblVolume =  new JLabel( imgVolume[volume] );
+			add( lblChannel );
+			add( lblVolume );
+<a href='javascript:history.back();' name='P1e'>P1e</a>		}
+		
+<a href='javascript:history.back();' name='P2b'>P2b</a>		public String clickPower()
+		{
+			if( power == OFF )
+			{
+				power = ON;
+				channel = 0;
+				volume = 1;
+				lblChannel.setIcon( imgChannel[channel] );
+				lblVolume.setIcon( imgVolume[volume] );
+				return "전원을 켭니다";
+			}
+			else 
+			{
+				power = OFF;
+				channel = imgChannel.length - 1;
+				volume = 0;
+				lblChannel.setIcon( imgChannel[channel] );
+				lblVolume.setIcon( imgVolume[volume] );
+				return "전원을 끕니다";
+			}
+<a href='javascript:history.back();' name='P2e'>P2e</a>		}
+		
+<a href='javascript:history.back();' name='P3b'>P3b</a>		public String clickUp()
+		{
+			if( power == ON )
+			{
+				channel = ( channel + 1 ) % ( imgChannel.length - 1 );
+				lblChannel.setIcon( imgChannel[channel] );
+			}
+			
+			return "현재 채널은 " + ( channel ) + "번입니다";
+<a href='javascript:history.back();' name='P3e'>P3e</a>		}
+		
+<a href='javascript:history.back();' name='P4b'>P4b</a>		public String clickDown()
+		{
+			if( power == ON )
+			{
+				channel = ( channel + ( imgChannel.length - 2 ) ) % ( imgChannel.length - 1 );
+				lblChannel.setIcon( imgChannel[channel] );
+			}
+			
+			return "현재 채널은 " + ( channel ) + "번입니다";
+<a href='javascript:history.back();' name='P4e'>P4e</a>		}
+		
+<a href='javascript:history.back();' name='P5b'>P5b</a>		public String clickLeft()
+		{
+			if( power == ON )
+			{
+				volume = ( volume + ( imgVolume.length - 1 ) ) % imgVolume.length;
+				lblVolume.setIcon( imgVolume[volume] );
+			}
+			
+			return "현재 음량은 " + ( volume ) + "입니다";
+<a href='javascript:history.back();' name='P5e'>P5e</a>		}
+		
+<a href='javascript:history.back();' name='P6b'>P6b</a>		public String clickRight()
+		{
+			if( power == ON )
+			{
+				volume = ( volume + 1 ) % imgVolume.length;
+				lblVolume.setIcon( imgVolume[volume] );
+			}
+			
+			return "현재 음량은 " + ( volume ) + "입니다";
+<a href='javascript:history.back();' name='P6e'>P6e</a>		}
+	}
+	package remoteControl;
+	
+	public interface RemoteControl
+	{
+		public final boolean ON = true;
+		public final boolean OFF = false;	
+		public String clickPower();
+		public String clickUp();
+		public String clickDown();
+		public String clickLeft();
+		public String clickRight();
+	}
+	</pre> 				<br>
+<h4>M1b M12과 M13 사이의 실행순서(11개) 및 실행상태</h4>
+<pre style='margin:0;padding:0;'><a href='#P1b'>P1b</a>  public TVPanel( final String imgPath ) </pre><br>
+<pre style='margin:0;padding:0;'><a href='#P11'>P11</a>   power = OFF;</pre> <br>그림번호 : <input id='blank0' type='text' required minlength='1' maxlength='30' size='20' onchange='sP3f6(0)'> <br> <br>
+<pre style='margin:0;padding:0;'><a href='#P1e'>P1e</a>  }</pre> <br>그림번호 : <input id='blank1' type='text' required minlength='1' maxlength='30' size='20' onchange='sP3f6(1)'> <br> <br>
+<pre style='margin:0;padding:0;'><a href='#M11'>M11</a>   TVPanel appliance = </pre><br>
+<pre style='margin:0;padding:0;'><a href='#M14'>M14</a>                           new RemoteControllerPanel( appliance, imagePath );</pre><br>
+<pre style='margin:0;padding:0;'><a href='#R1b'>R1b</a>  public RemoteControllerPanel( RemoteControl appliance, final String imgPath )</pre><br>
+<pre style='margin:0;padding:0;'><a href='#R11'>R11</a>   this( imgPath );</pre><br>
+<pre style='margin:0;padding:0;'><a href='#R2b'>R2b</a>  public RemoteControllerPanel( final String imgPath )       </pre><br>
+<pre style='margin:0;padding:0;'><a href='#R21'>R21</a>   this.setPreferredSize( new Dimension( 240, 120 ) );  </pre> <br>그림번호 : <input id='blank2' type='text' required minlength='1' maxlength='30' size='20' onchange='sP3f6(2)'> <br> <br>
+<pre style='margin:0;padding:0;'><a href='#R2e'>R2e</a>  }      </pre> <br>그림번호 : <input id='blank3' type='text' required minlength='1' maxlength='30' size='20' onchange='sP3f6(3)'> <br> <br>
+<pre style='margin:0;padding:0;'><a href='#R1e'>R1e</a>  }</pre><br>
+<h4>E001(POWER를 선택) 이후 실행순서(5개) 및 실행상태</h4>
+<pre style='margin:0;padding:0;'><a href='#R3b'>R3b</a>  public void actionPerformed( ActionEvent event )</pre><br>
+<pre style='margin:0;padding:0;'><a href='#R31'>R31</a>    appliance.clickPower();</pre><br>
+<pre style='margin:0;padding:0;'><a href='#P2b'>P2b</a>  public String clickPower()</pre><br>
+<pre style='margin:0;padding:0;'><a href='#P2e'>P2e</a>  }</pre> <br>그림번호 : <input id='blank4' type='text' required minlength='1' maxlength='30' size='20' onchange='sP3f6(4)'> <br> <br>
+<pre style='margin:0;padding:0;'><a href='#R3e'>R3e</a>  } </pre><br>
+<table border='1'><tr><td width='50' align='center'>1</td><td><br>&nbsp; <img src='https://shyprogrammer351.github.io/ig3i/remoteControl/RC_GUI_TV_0012.jpg' /><br>&nbsp;</td></tr> <tr><td width='50' align='center'>2</td><td><br>&nbsp; <img src='https://shyprogrammer351.github.io/ig3i/remoteControl/RC_GUI_TV_0015.jpg' /><br>&nbsp;</td></tr> <tr><td width='50' align='center'>3</td><td><br>&nbsp; <img src='https://shyprogrammer351.github.io/ig3i/remoteControl/RC_GUI_TV_0013.jpg' /><br>&nbsp;</td></tr> <tr><td width='50' align='center'>4</td><td><br>&nbsp; <img src='https://shyprogrammer351.github.io/ig3i/remoteControl/RC_GUI_TV_0014.jpg' /><br>&nbsp;</td></tr> <tr><td width='50' align='center'>5</td><td><br>&nbsp; <img src='https://shyprogrammer351.github.io/ig3i/remoteControl/RC_GUI_TV_002.jpg' /><br>&nbsp;</td></tr> <tr><td width='50' align='center'>6</td><td><br>&nbsp; <img src='https://shyprogrammer351.github.io/ig3i/remoteControl/RC_GUI_TV_003.jpg' /><br>&nbsp;</td></tr> <tr><td width='50' align='center'>7</td><td><br>&nbsp; <img src='https://shyprogrammer351.github.io/ig3i/remoteControl/RC_GUI_TV_004.jpg' /><br>&nbsp;</td></tr> <tr><td width='50' align='center'>8</td><td><br>&nbsp; <img src='https://shyprogrammer351.github.io/ig3i/remoteControl/RC_GUI_TV_005.jpg' /><br>&nbsp;</td></tr> <tr><td width='50' align='center'>9</td><td><br>&nbsp; <img src='https://shyprogrammer351.github.io/ig3i/remoteControl/RC_GUI_TV_006.jpg' /><br>&nbsp;</td></tr> <tr><td width='50' align='center'>10</td><td><br>&nbsp; <img src='https://shyprogrammer351.github.io/ig3i/remoteControl/RC_GUI_TV_007.jpg' /><br>&nbsp;</td></tr> <tr><td width='50' align='center'>11</td><td><br>&nbsp; <img src='https://shyprogrammer351.github.io/ig3i/remoteControl/RC_GUI_TV_008.jpg' /><br>&nbsp;</td></tr> <tr><td width='50' align='center'>12</td><td><br>&nbsp; <img src='https://shyprogrammer351.github.io/ig3i/remoteControl/RC_GUI_TV_009.jpg' /><br>&nbsp;</td></tr> <tr><td width='50' align='center'>13</td><td><br>&nbsp; <img src='https://shyprogrammer351.github.io/ig3i/remoteControl/RC_GUI_TV_010.jpg' /><br>&nbsp;</td></tr> <tr><td width='50' align='center'>14</td><td><br>&nbsp; <img src='https://shyprogrammer351.github.io/ig3i/remoteControl/RC_GUI_TV_011.jpg' /><br>&nbsp;</td></tr> <tr><td width='50' align='center'>15</td><td><br>&nbsp; <img src='https://shyprogrammer351.github.io/ig3i/remoteControl/RC_GUI_TV_012.jpg' /><br>&nbsp;</td></tr> <tr><td width='50' align='center'>16</td><td><br>&nbsp; <img src='https://shyprogrammer351.github.io/ig3i/remoteControl/RC_GUI_TV_001.jpg' /><br>&nbsp;</td></tr> <tr><td width='50' align='center'>17</td><td><br>&nbsp; <img src='https://shyprogrammer351.github.io/ig3i/remoteControl/RC_GUI_TV_013.jpg' /><br>&nbsp;</td></tr>
+</table>
+ 				<br><br><br><br><br><br><br><br> &nbsp;  			</div> 		</div> 	</body> </html> 

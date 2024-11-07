@@ -1,0 +1,206 @@
+<!DOCTYPE html> <html> 	<head> 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7250753558435816" crossorigin="anonymous"></script> 		<link rel="stylesheet" href="../layout.css"> 		<script type="text/javascript" src="../functions.js"></script> 		<script> 			const sP3d10 = "1 3 P1b P12 B1b B1e P11 P1e 2 4 E001 P4b P41 B4b B41 B3b B3e B42 B5b B5e B4e P42 B2b B21 B1b B1e B2e P43 B3b B3e P44 B7b B71 B6b B6e B7e P45 P5b P51 B9b B91 B8b B8e B9e P52 B8b B8e P5e P4e E002 P2b P2e E003 5 E004"; 		</script> 	</head> 	<body oncontextmenu="return false" oncut="return false" onpaste="return false" draggable="false" ondragstart="return false" ondrop="return false"> 		<div id = "container"> 			<div id = "titleBox"> JAVA 프로그래밍 </div> 			<div id = "navigationBox"><ol start=0><li><a href='../Jf0i/Jf0i0.html'>JAVA 프로그래밍 시작</a></li><li><a href='../Jf1i/Jf1i0.html'>출력</a></li><li><a href='../Jf2i/Jf2i0.html'>입력</a></li><li><a href='../Jf3i/Jf3i0.html'>변수</a></li><li><a href='../Jf4i/Jf4i0.html'>연산자</a></li><li><a href='../Jf5i/Jf5i0.html'>선택문(삼항연산자/switch)</a></li><li><a href='../Jf6i/Jf6i0.html'>선택문(if)</a></li><li><a href='../Jf7i/Jf7i0.html'>반복문(while)</a></li><li><a href='../Jf8i/Jf8i0.html'>반복문(for)</a></li><li><a href='../Jf9i/Jf9i0.html'>배열</a></li><li><a href='../Jg0i/Jg0i0.html'>문자열/컬렉션</a></li><li><a href='../Jg1i/Jg1i0.html'>클래스/패키지</a></li><li><a href='../Jg2i/Jg2i0.html'>상속/다형성</a></li><li><a href='../Jg3i/Jg3i0.html'>GUI기초</a></li><li><a href='../Jg4i/Jg4i0.html'>GUI응용</a></li><ul><li><a href='../Jg4i/Jg4i1.html'>캐릭터 이동</a></li><li><a href='../Jg4i/Jg4i2.html'>구슬찾기</a></li><li><a href='../Jg4i/Jg4i3.html'>가위바위보</a></li><li><a href='../Jg4i/Jg4i4.html'>리모컨-TV</a></li><li><a href='../Jg4i/Jg4i5.html'>폭탄 피하기</a></li><ul><li><a href='Jg4i5.html'>코드읽기</a></li><li><a href='Jg4i5a.html'>알고리즘</a></li><li><a href='Jg4i5k.html'>키워드</a></li><li><a href='Jg4i5b.html'>빈칸채우기</a></li><li><a href='Jg4i5s.html'>실행순서</a></li><li><a href='Jg4i5m.html'>실행상태</a></li><li><a href='https://github.com/CodeReading101/JAVA/blob/main/Chapter14/BombDodgeGameGUI.java' target='code'>소스코드</a></li></ul></ul><li><a href='../Jg5i/Jg5i0.html'>예외/쓰레드</a></li><li><a href='../Jg6i/Jg6i0.html'>파일입출력</a></li><li><a href='../Jg7i/Jg7i0.html'>네트워크(1:1)</a></li><li><a href='../Jg8i/Jg8i0.html'>네트워크(1:n)</a></li><li><a href='../Jg9i/Jg9i0.html'>열거형/제네릭</a></li><li><a href='../Jh0i/Jh0i0.html'>재귀함수</a></li></ol></div>  			<div id = "contentBox"> 				<h4>문제</h4> 				<pre style='white-space:normal;'>떨어지는 폭탄을 피해 살아남아야 하는 게임입니다 실행순서를 클릭하세요 </pre> 				
+<img width="150" src = "https://shyprogrammer351.github.io/ig3i/GUI2/bombDodge_2.jpg" >
+<img width="150" src = "https://shyprogrammer351.github.io/ig3i/GUI2/bombDodge_3.jpg" >
+<img width="150" src = "https://shyprogrammer351.github.io/ig3i/GUI2/bombDodge_4.jpg" >
+<pre> 
+</pre><br>  	 				<h4>프로그램 코드</h4> 				<pre>
+<pre id="codeE001" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('E001')">E001		<font color="green">// 타이머 호출</font>
+</pre><pre id="codeE002" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('E002')">E002		<font color="green">// D키를 누름</font>
+</pre><pre id="codeE003" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('E003')">E003		<font color="green">// 프로그램 닫기(우측상단 X) 선택</font>
+
+</pre><pre id="code0" class="unselectable codeClass">	import java.awt.*;
+</pre><pre id="code0" class="unselectable codeClass">	import java.awt.event.*;
+</pre><pre id="code0" class="unselectable codeClass">	import javax.swing.*;
+</pre><pre id="code0" class="unselectable codeClass">	import java.util.ArrayList;
+
+</pre><pre id="code0" class="unselectable codeClass">	class Entity
+</pre><pre id="code0" class="unselectable codeClass">	{
+</pre><pre id="code0" class="unselectable codeClass">		private Image image;
+</pre><pre id="code0" class="unselectable codeClass">		private int x, y, maxX, maxY;
+</pre><pre id="code0" class="unselectable codeClass">		private final int SPEED = 20, WIDTH = 25, HEIGHT = 35, MARGIN = 25;
+</pre><pre id="code0" class="unselectable codeClass">		public static final int LEFT = -1, RIGHT = 1, UP = -1, DOWN = 1, STOP = 0;
+
+</pre><pre id="codeB1b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B1b')">B1b		public Entity( final String image, int x, int y, int bgWidth, int bgHeight ) {
+</pre><pre id="code0" class="unselectable codeClass">			this.image = new ImageIcon( image ).getImage();
+</pre><pre id="code0" class="unselectable codeClass">			this.x = x;
+</pre><pre id="code0" class="unselectable codeClass">			this.y = y;
+</pre><pre id="code0" class="unselectable codeClass">			this.maxX = bgWidth - WIDTH - MARGIN;
+</pre><pre id="code0" class="unselectable codeClass">			this.maxY = bgHeight- HEIGHT- MARGIN;
+</pre><pre id="codeB1e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B1e')">B1e		}
+</pre><pre id="codeB2b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B2b')">B2b		public Entity( final String image, int bgWidth, int bgHeight ) {
+</pre><pre id="codeB21" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B21')">B21			this( image, 0, 50, bgWidth, bgHeight );
+</pre><pre id="code0" class="unselectable codeClass">			this.x = (int)( Math.random() * maxX );
+</pre><pre id="codeB2e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B2e')">B2e		}
+
+</pre><pre id="codeB3b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B3b')">B3b		public void move( int x, int y ) {
+</pre><pre id="code0" class="unselectable codeClass">			this.x += SPEED * x;
+</pre><pre id="code0" class="unselectable codeClass">			this.y += SPEED * y;
+</pre><pre id="code0" class="unselectable codeClass">			this.x = ( this.x &gt; MARGIN) ? this.x : MARGIN;
+</pre><pre id="code0" class="unselectable codeClass">			this.x = ( this.x &lt; maxX  ) ? this.x : maxX;
+</pre><pre id="code0" class="unselectable codeClass">			this.y = ( this.y &gt; MARGIN) ? this.y : MARGIN;
+</pre><pre id="code0" class="unselectable codeClass">			this.y = ( this.y &lt; maxY  ) ? this.y : maxY;
+</pre><pre id="codeB3e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B3e')">B3e		}
+</pre><pre id="codeB4b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B4b')">B4b		public static void move( ArrayList&lt;Entity&gt; bombs ) {
+</pre><pre id="code0" class="unselectable codeClass">			for ( int i = 0; i &lt; bombs.size(); i++ ) {
+</pre><pre id="code0" class="unselectable codeClass">				Entity bomb = bombs.get(i);
+</pre><pre id="codeB41" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B41')">B41				bomb.move( STOP, DOWN );
+</pre><pre id="codeB42" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B42')">B42				if ( ( bomb.collide() == true ) )
+</pre><pre id="code0" class="unselectable codeClass">					bombs.remove( bomb );
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre><pre id="codeB4e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B4e')">B4e		}
+</pre><pre id="code0" class="unselectable codeClass">		
+</pre><pre id="codeB5b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B5b')">B5b		public boolean collide() {
+</pre><pre id="code0" class="unselectable codeClass">			return ( x &lt; MARGIN ) || ( maxX &lt;= x ) || ( y &lt; MARGIN ) || ( maxY &lt;= y );
+</pre><pre id="codeB5e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B5e')">B5e		}
+</pre><pre id="codeB6b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B6b')">B6b		private boolean collide( Entity bomb ) {
+</pre><pre id="code0" class="unselectable codeClass">			return ( Math.abs( this.x - bomb.x ) &lt; MARGIN ) && ( Math.abs( this.y - bomb.y ) &lt; MARGIN );
+</pre><pre id="codeB6e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B6e')">B6e		}
+</pre><pre id="codeB7b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B7b')">B7b		public boolean collide( ArrayList&lt;Entity&gt; bombs ) {
+</pre><pre id="code0" class="unselectable codeClass">			for ( Entity bomb : bombs ) {
+</pre><pre id="codeB71" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B71')">B71				if ( this.collide( bomb ) == true )
+</pre><pre id="code0" class="unselectable codeClass">					return true;
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre><pre id="code0" class="unselectable codeClass">			return false;
+</pre><pre id="codeB7e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B7e')">B7e		}
+</pre><pre id="code0" class="unselectable codeClass">		
+</pre><pre id="codeB8b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B8b')">B8b		public void paint( Graphics g ) {
+</pre><pre id="code0" class="unselectable codeClass">			g.drawImage( image, x, y, WIDTH, HEIGHT, null );
+</pre><pre id="codeB8e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B8e')">B8e		}
+</pre><pre id="codeB9b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B9b')">B9b		public static void paint( ArrayList&lt;Entity&gt; bombs, Graphics g ) {
+</pre><pre id="code0" class="unselectable codeClass">			for ( Entity bomb : bombs )
+</pre><pre id="codeB91" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B91')">B91				bomb.paint( g );
+</pre><pre id="codeB9e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B9e')">B9e		}
+</pre><pre id="code0" class="unselectable codeClass">	}
+</pre><pre id="code0" class="unselectable codeClass">			
+</pre><pre id="code0" class="unselectable codeClass">	class BombDodgePanel extends JPanel
+</pre><pre id="code0" class="unselectable codeClass">	{
+</pre><pre id="code0" class="unselectable codeClass">		protected Entity character;
+</pre><pre id="code0" class="unselectable codeClass">		private int characterX;
+</pre><pre id="code0" class="unselectable codeClass">		private int characterHP;
+
+</pre><pre id="code0" class="unselectable codeClass">		private ArrayList&lt;Entity&gt; bombs;
+</pre><pre id="code0" class="unselectable codeClass">		protected String imageBomb;
+
+</pre><pre id="code0" class="unselectable codeClass">		private Timer timer;
+
+</pre><pre id="code0" class="unselectable codeClass">		
+</pre><pre id="codeP1b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('P1b')">P1b		public BombDodgePanel( final String imgPath ) {
+</pre><pre id="code0" class="unselectable codeClass">			bombs = new ArrayList&lt;Entity&gt;();
+</pre><pre id="code0" class="unselectable codeClass">			imageBomb = imgPath + "bomb.png";
+</pre><pre id="code0" class="unselectable codeClass">			
+</pre><pre id="codeP11" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('P11')">P11			character =
+</pre><pre id="codeP12" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('P12')">P12			            new Entity( imgPath + "character.png", WIDTH/2, HEIGHT-60, WIDTH, HEIGHT );
+</pre><pre id="code0" class="unselectable codeClass">			characterX = character.STOP;
+</pre><pre id="code0" class="unselectable codeClass">			characterHP = 5;
+
+</pre><pre id="code0" class="unselectable codeClass">			setBackground( Color.white );
+</pre><pre id="code0" class="unselectable codeClass">			setPreferredSize( new Dimension( WIDTH, HEIGHT ) );
+
+</pre><pre id="code0" class="unselectable codeClass">			addKeyListener( new MyKeyListener() );
+</pre><pre id="code0" class="unselectable codeClass">			setFocusable( true );
+</pre><pre id="code0" class="unselectable codeClass">			requestFocus();
+</pre><pre id="code0" class="unselectable codeClass">			
+</pre><pre id="code0" class="unselectable codeClass">			timer = new Timer( 40, new TimerListener() );
+</pre><pre id="code0" class="unselectable codeClass">			timer.start();
+</pre><pre id="code0" class="unselectable codeClass">			this.time = 300;
+</pre><pre id="codeP1e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('P1e')">P1e		}
+
+</pre><pre id="code0" class="unselectable codeClass">		private class MyKeyListener extends KeyAdapter {
+</pre><pre id="codeP2b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('P2b')">P2b			public void keyPressed( KeyEvent e ) {
+</pre><pre id="code0" class="unselectable codeClass">				switch( e.getKeyCode() ) {
+</pre><pre id="code0" class="unselectable codeClass">				case KeyEvent.VK_ESCAPE:
+</pre><pre id="code0" class="unselectable codeClass">					System.exit(0);
+</pre><pre id="code0" class="unselectable codeClass">					break;
+</pre><pre id="code0" class="unselectable codeClass">				case KeyEvent.VK_LEFT: case 'A': case 'a':
+</pre><pre id="code0" class="unselectable codeClass">					characterX = character.LEFT;
+</pre><pre id="code0" class="unselectable codeClass">					break;
+</pre><pre id="code0" class="unselectable codeClass">				case KeyEvent.VK_RIGHT: case 'D': case 'd':
+</pre><pre id="code0" class="unselectable codeClass">					characterX = character.RIGHT;
+</pre><pre id="code0" class="unselectable codeClass">					break;
+</pre><pre id="code0" class="unselectable codeClass">				}
+</pre><pre id="codeP2e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('P2e')">P2e			}
+</pre><pre id="codeP3b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('P3b')">P3b			public void keyReleased( KeyEvent e ) {
+</pre><pre id="code0" class="unselectable codeClass">				switch( e.getKeyCode() ) {
+</pre><pre id="code0" class="unselectable codeClass">				case KeyEvent.VK_LEFT: case 'A': case 'a':
+</pre><pre id="code0" class="unselectable codeClass">				case KeyEvent.VK_RIGHT: case 'D': case 'd':
+</pre><pre id="code0" class="unselectable codeClass">					characterX = character.STOP;
+</pre><pre id="code0" class="unselectable codeClass">					break;
+</pre><pre id="code0" class="unselectable codeClass">				}
+</pre><pre id="codeP3e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('P3e')">P3e			}
+</pre><pre id="code0" class="unselectable codeClass">		}
+</pre><pre id="code0" class="unselectable codeClass">		
+</pre><pre id="code0" class="unselectable codeClass">		private class TimerListener implements ActionListener {
+</pre><pre id="codeP4b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('P4b')">P4b			public void actionPerformed( ActionEvent event ) {
+</pre><pre id="codeP41" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('P41')">P41				Entity.move( bombs );
+</pre><pre id="code0" class="unselectable codeClass">				if ( ( ( time-- ) % 8 ) == 0 )
+</pre><pre id="code0" class="unselectable codeClass">					bombs.add(
+</pre><pre id="codeP42" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('P42')">P42					           new Entity( imageBomb, WIDTH, HEIGHT ) );
+</pre><pre id="code0" class="unselectable codeClass">				
+</pre><pre id="codeP43" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('P43')">P43				character.move( characterX, character.STOP );
+</pre><pre id="codeP44" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('P44')">P44				if( character.collide( bombs ) == true )
+</pre><pre id="code0" class="unselectable codeClass">					characterHP--;
+</pre><pre id="code0" class="unselectable codeClass">				
+</pre><pre id="codeP45" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('P45')">P45				repaint();
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre><pre id="codeP4e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('P4e')">P4e		}
+</pre><pre id="code0" class="unselectable codeClass">		
+</pre><pre id="codeP5b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('P5b')">P5b		public void paint( Graphics g ) {
+</pre><pre id="code0" class="unselectable codeClass">			super.paint( g );
+</pre><pre id="code0" class="unselectable codeClass">			
+</pre><pre id="code0" class="unselectable codeClass">			g.setColor( Color.black );
+</pre><pre id="code0" class="unselectable codeClass">			g.setFont( new Font( "Arial", Font.BOLD, 40 ) );
+</pre><pre id="code0" class="unselectable codeClass">			g.drawString( "HP : " + hp(), 20, 50 );
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">			if ( this.time &lt;= 0 ) {
+</pre><pre id="code0" class="unselectable codeClass">				g.drawString( "Success!", WIDTH/2-100, HEIGHT/2 );
+</pre><pre id="code0" class="unselectable codeClass">				timer.stop();
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre><pre id="code0" class="unselectable codeClass">			else if ( this.characterHP &lt;= 0 ) {
+</pre><pre id="code0" class="unselectable codeClass">				g.drawString( "Game Over!", WIDTH/2-100, HEIGHT/2 );
+</pre><pre id="code0" class="unselectable codeClass">				timer.stop();
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre><pre id="code0" class="unselectable codeClass">			else {
+</pre><pre id="codeP51" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('P51')">P51				Entity.paint( bombs, g );
+</pre><pre id="codeP52" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('P52')">P52				character.paint( g );
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre><pre id="codeP5e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('P5e')">P5e		}
+</pre><pre id="code0" class="unselectable codeClass">		
+</pre><pre id="code0" class="unselectable codeClass">		public String hp() {
+</pre><pre id="code0" class="unselectable codeClass">			switch( this.characterHP ) {
+</pre><pre id="code0" class="unselectable codeClass">			case 5:
+</pre><pre id="code0" class="unselectable codeClass">				return "● ● ● ● ●";
+</pre><pre id="code0" class="unselectable codeClass">			case 4:
+</pre><pre id="code0" class="unselectable codeClass">				return "● ● ● ● ○";
+</pre><pre id="code0" class="unselectable codeClass">			case 3:
+</pre><pre id="code0" class="unselectable codeClass">				return "● ● ● ○ ○";
+</pre><pre id="code0" class="unselectable codeClass">			case 2:
+</pre><pre id="code0" class="unselectable codeClass">				return "● ● ○ ○ ○";
+</pre><pre id="code0" class="unselectable codeClass">			case 1:
+</pre><pre id="code0" class="unselectable codeClass">				return "● ○ ○ ○ ○";
+</pre><pre id="code0" class="unselectable codeClass">			default:
+</pre><pre id="code0" class="unselectable codeClass">				return "○ ○ ○ ○ ○";
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre><pre id="code0" class="unselectable codeClass">		}
+</pre><pre id="code0" class="unselectable codeClass">	}
+
+</pre><pre id="code0" class="unselectable codeClass">	public class BombDodgeGameGUI
+</pre><pre id="code0" class="unselectable codeClass">	{
+</pre><pre id="code1" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('1')">1		public static void main( String [] args )
+</pre><pre id="code0" class="unselectable codeClass">		{
+</pre><pre id="code0" class="unselectable codeClass">			final String imagePath = "C:\\Users\\user\\Downloads\\JAVA-main\\Chapter14\\image\\";
+
+</pre><pre id="code0" class="unselectable codeClass">			JFrame frame = new JFrame ( "폭탄 피하기 게임" );
+
+</pre><pre id="code2" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('2')">2			BombDodgePanel panel =
+</pre><pre id="code3" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('3')">3			                       new BombDodgePanel( imagePath );
+</pre><pre id="code0" class="unselectable codeClass">			
+</pre><pre id="code0" class="unselectable codeClass">			frame.getContentPane().add( panel );
+</pre><pre id="code0" class="unselectable codeClass">			frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+</pre><pre id="code0" class="unselectable codeClass">			frame.pack();
+</pre><pre id="code0" class="unselectable codeClass">			frame.setVisible( true );
+</pre><pre id="code0" class="unselectable codeClass">			
+</pre><pre id="code4" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('4')">4			<font color="green">// 이벤트 발생시 처리 준비중</font>
+</pre><pre id="code5" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('5')">5		}
+</pre><pre id="code0" class="unselectable codeClass">	}
+</pre>
+</pre> 				<br><br><br><br><br><br><br><br> &nbsp;  			</div> 			<div id = "floatingBox"> 				<b>실행 순서</b> 				<pre id = "sP3d4" style='white-space:normal; word-wrap:break-word; width:150px;'></pre> 			</div> 		</div> 	</body> </html>   
