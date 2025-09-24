@@ -1,302 +1,385 @@
-<html> 	<head> 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7250753558435816" crossorigin="anonymous"></script> 		<link rel="stylesheet" href="../layout.css"> 		<script type="text/javascript" src="../functions.js"></script> 		<script type="text/javascript" src="../Js0J1f/J1403.js"></script> 	</head> 	<body onkeydown='sP3f4();' oncontextmenu="return false" onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false" draggable="false" ondragstart="return false" ondrop="return false"> 		<div id = "container"> 			<div id = "titleBox"> JAVA 프로그래밍 </div> 			<div id = "navigationBox"><ol start=0><li><a href='../Jf0i/Jf0i0.html'>JAVA 프로그래밍 시작</a></li><li><a href='../Jf1i/Jf1i0.html'>출력</a></li><li><a href='../Jf2i/Jf2i0.html'>입력</a></li><li><a href='../Jf3i/Jf3i0.html'>변수</a></li><li><a href='../Jf4i/Jf4i0.html'>연산자</a></li><li><a href='../Jf5i/Jf5i0.html'>선택문(삼항연산자/switch)</a></li><li><a href='../Jf6i/Jf6i0.html'>선택문(if)</a></li><li><a href='../Jf7i/Jf7i0.html'>반복문(while)</a></li><li><a href='../Jf8i/Jf8i0.html'>반복문(for)</a></li><li><a href='../Jf9i/Jf9i0.html'>배열</a></li><li><a href='../Jg0i/Jg0i0.html'>문자열/컬렉션</a></li><li><a href='../Jg1i/Jg1i0.html'>클래스/패키지</a></li><li><a href='../Jg2i/Jg2i0.html'>상속/다형성</a></li><li><a href='../Jg3i/Jg3i0.html'>GUI기초</a></li><li><a href='../Jg4i/Jg4i0.html'>GUI응용</a></li><ul><li><a href='../Jg4i/Jg4i1.html'>캐릭터 이동</a></li><li><a href='../Jg4i/Jg4i2.html'>구슬찾기</a></li><li><a href='../Jg4i/Jg4i3.html'>가위바위보</a></li><ul><li><a href='Jg4i3.html'>코드읽기</a></li><li><a href='Jg4i3a.html'>알고리즘</a></li><li><a href='Jg4i3k.html'>키워드</a></li><li><a href='Jg4i3b.html'>빈칸채우기</a></li><li><a href='Jg4i3s.html'>실행순서</a></li><li><a href='Jg4i3m.html'>실행상태</a></li><li><a href='https://github.com/CodeReading101/JAVA/blob/main/Chapter14/RockPaperScissorsGUI.java' target='code'>소스코드</a></li></ul><li><a href='../Jg4i/Jg4i4.html'>리모컨-TV</a></li><li><a href='../Jg4i/Jg4i5.html'>폭탄 피하기</a></li></ul><li><a href='../Jg5i/Jg5i0.html'>예외/쓰레드</a></li><li><a href='../Jg6i/Jg6i0.html'>파일입출력</a></li><li><a href='../Jg7i/Jg7i0.html'>네트워크(1:1)</a></li><li><a href='../Jg8i/Jg8i0.html'>네트워크(1:n)</a></li><li><a href='../Jg9i/Jg9i0.html'>열거형/제네릭</a></li><li><a href='../Jh0i/Jh0i0.html'>재귀함수</a></li></ol></div>  			<div id = "contentBox"> 				<h4>문제</h4> 				<pre style='white-space:normal;'>가위바위보 게임의 GUI 문제입니다 이를 해결하는 다음 프로그램을 해석하세요 </pre> 				
-<img src = "https://shyprogrammer351.github.io/ig3i/RockPaperScissors/RPS_GUI_007.jpg" >
+<html> 	<head> 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7250753558435816" crossorigin="anonymous"></script> 		<link rel="stylesheet" href="../layout.css"> 		<script type="text/javascript" src="../functions.js"></script> 		<script type="text/javascript" src="../Js0J1f/J1403.js"></script> 	</head> 	<body onkeydown='sP3f4();' oncontextmenu="return false" onselectstart="return false" oncopy="return false" oncut="return false" onpaste="return false" draggable="false" ondragstart="return false" ondrop="return false"> 		<div id = "container"> 			<div id = "titleBox"> JAVA 프로그래밍 </div> 			<div id = "navigationBox"><ol start=0><li><a href='../Jf0i/Jf0i0.html'>JAVA 프로그래밍 시작</a></li><li><a href='../Jf1i/Jf1i0.html'>출력</a></li><li><a href='../Jf2i/Jf2i0.html'>입력</a></li><li><a href='../Jf3i/Jf3i0.html'>변수</a></li><li><a href='../Jf4i/Jf4i0.html'>연산자</a></li><li><a href='../Jf5i/Jf5i0.html'>선택문(삼항연산자/switch)</a></li><li><a href='../Jf6i/Jf6i0.html'>선택문(if)</a></li><li><a href='../Jf7i/Jf7i0.html'>반복문(while)</a></li><li><a href='../Jf8i/Jf8i0.html'>반복문(for)</a></li><li><a href='../Jf9i/Jf9i0.html'>배열</a></li><li><a href='../Jg0i/Jg0i0.html'>문자열/컬렉션</a></li><li><a href='../Jg1i/Jg1i0.html'>클래스/패키지</a></li><li><a href='../Jg2i/Jg2i0.html'>상속/다형성</a></li><li><a href='../Jg3i/Jg3i0.html'>GUI기초</a></li><li><a href='../Jg4i/Jg4i0.html'>GUI응용</a></li><ul><li><a href='../Jg4i/Jg4i1.html'>탑 뷰 게임</a></li><li><a href='../Jg4i/Jg4i2.html'>사이드 뷰 게임</a></li><li><a href='../Jg4i/Jg4i3.html'>폭탄 피하기</a></li><ul><li><a href='Jg4i3.html'>코드읽기</a></li><li><a href='Jg4i3a.html'>알고리즘</a></li><li><a href='Jg4i3k.html'>키워드</a></li><li><a href='Jg4i3b.html'>빈칸채우기</a></li><li><a href='Jg4i3s.html'>실행순서</a></li><li><a href='Jg4i3m.html'>실행상태</a></li><li><a href='https://github.com/CodeReading101/JAVA/blob/main/Chapter14/BombDodgeGameGUI.java' target='code'>소스코드</a></li></ul><li><a href='../Jg4i/Jg4i4.html'>총알 피하기</a></li></ul><li><a href='../Jg5i/Jg5i0.html'>예외/스레드</a></li><li><a href='../Jg6i/Jg6i0.html'>파일입출력</a></li><li><a href='../Jg7i/Jg7i0.html'>네트워크(1:1)</a></li><li><a href='../Jg8i/Jg8i0.html'>네트워크(1:n)</a></li><li><a href='../Jg9i/Jg9i0.html'>열거형/제네릭</a></li><li><a href='../Jh0i/Jh0i0.html'>재귀호출</a></li></ol></div>  			<div id = "contentBox"> 				<h4>문제</h4> 				<pre style='white-space:normal;'>하늘에서 떨어지는 폭탄을 피해 살아남아야 하는 게임입니다 이를 해결하는 다음 프로그램을 해석하세요 </pre> 				
+<img width="150" src = "https://shyprogrammer351.github.io/ig3i/move/bombDodge_1.jpg" >
+<img width="150" src = "https://shyprogrammer351.github.io/ig3i/move/bombDodge_3.jpg" >
+<img width="150" src = "https://shyprogrammer351.github.io/ig3i/move/bombDodge_4.jpg" >
 <pre> 
-</pre><br> 	  				<h4>알고리즘</h4> 				<pre style='white-space:normal;'> 가위바위보 GUI 패널 초기화 <br> &nbsp; &nbsp;가위바위보 3가지, 미선택 1가지, 승패 2가지를 2차원 배열로 고려하여 총 8(=(3+1)*2)가지 경우의 이미지를 준비 <br> &nbsp; &nbsp;화면 위쪽에 참여자와 상대편의 가위바위보 이미지 초기화 <br> &nbsp; &nbsp;화면 아래쪽에 가위바위보 입력 버튼 3개 초기화 <br> <br> 참여자가 가위바위보를 선택시 상대편 선택과 비교하여 승패 결과를 제시하고 게임 상황 업데이트 <br> &nbsp; &nbsp;참여자가 먼저 가위바위보 내기 <br> &nbsp; &nbsp;상대편도 임의로 가위바위보 내기 <br> &nbsp; &nbsp;승패 결과를 GUI 화면에 업데이트 <br> &nbsp; &nbsp;다음 판은 잠시 대기 <br> &nbsp; &nbsp;잠시 대기후 다음 판 허용 <br></pre> 		 				<br><h4>프로그램 코드 <input id='btn' type='button' value='실행순서 및 메모리상태 확인' onclick='sP3f5();'/></h4>  				<div id = "codeBox">
-<pre id="codeE001" class="unselectable codeClass">E001		<font color="green">// [상대편]은 임의로 보를 선택했고 [참여자]가 가위를 선택</font>
+</pre><br> 	  				<h4>알고리즘</h4> 				<pre style='white-space:normal;'> 뷰 패널 <br> &nbsp; &nbsp;키리스너에 방향키로 이동하는 캐릭터를 등록 <br> &nbsp; &nbsp;주기적으로 활성화되는 타이머 등록 <br> &nbsp; &nbsp;&nbsp; &nbsp;최신 정보 업데이트 <br> &nbsp; &nbsp;&nbsp; &nbsp;화면 출력 <br> <br> 폭탄 피하기 패널 <br> &nbsp; &nbsp;최신 정보 업데이트 <br> &nbsp; &nbsp;&nbsp; &nbsp;모든 폭탄은 아래로 떨어지며, 일정 시간마다 새 폭탄을 투하 <br> &nbsp; &nbsp;&nbsp; &nbsp;캐릭터는 이동하고 HP 업데이트 <br> &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;캐릭터와 폭탄이 충돌하면 캐릭터 HP 감소 <br> &nbsp; &nbsp;화면 출력 <br> &nbsp; &nbsp;&nbsp; &nbsp;먼저, 제한시간동안 폭탄을 피해 살아남으면 성공 출력 <br> &nbsp; &nbsp;&nbsp; &nbsp;또는, HP가 더 이상 없으면 실패 출력 <br> &nbsp; &nbsp;&nbsp; &nbsp;아니면, 캐릭터 및 폭탄의 현재 게임 상황 출력 <br> <br> 방향키로 이동하는 객체 <br> &nbsp; &nbsp;키를 입력하면 상하좌우 이동방향 설정 <br> &nbsp; &nbsp;키를 해제하면 이동 멈춤 설정 <br> &nbsp; &nbsp;이동 허용 범위내에서만 객체 이동 <br> <br> 충돌가능한 객체 <br> &nbsp; &nbsp;캐릭터 초기화 : 이미지, 현재 위치, 이동 허용 범위를 설정 <br> &nbsp; &nbsp;폭탄 초기화 : 위쪽(임의위치)에서 아래쪽으로 폭탄을 투하 <br> &nbsp; &nbsp;총알 초기화 : 왼쪽(임의위치)에서 오른쪽으로 총알을 발사 <br> &nbsp; &nbsp;이동 허용 범위를 벗어나거나 다른 객체와 충돌하는지 여부 확인 <br></pre> 				<br><br>&nbsp; <span style='font-family:arial; font-size:14px;'>이미지: 캐릭터, 폭탄 </span>  <br><br>&nbsp; 
+<img src='https://shyprogrammer351.github.io/ig3i/move/bomb_image.jpg' width='150'> <br><br>&nbsp; <span style='font-family:arial; font-size:14px;'>총알 피하기 게임의 클래스 다이어그램</span>  <br>&nbsp; 
+<img src='https://shyprogrammer351.github.io/ig3i/move/sequence_bombDodgeGame.jpg' width='500'> <br>&nbsp; <span style='font-family:arial; font-size:14px;'>총알 피하기 게임의 초기화 과정</span>  <br><br>&nbsp; 
+<img src='https://shyprogrammer351.github.io/ig3i/move/sequence_bombDodgeGame_init.jpg' width='500'> <br><br>&nbsp; <span style='font-family:arial; font-size:14px;'>총알 피하기 게임에서 방향키 입력시 처리 과정</span>   <br><br>&nbsp; 
+<img src='https://shyprogrammer351.github.io/ig3i/move/sequence_bombDodgeGame_keyPressed.jpg' width='500'> <br><br>&nbsp; <span style='font-family:arial; font-size:14px;'>총알 피하기 게임에서 주기적으로 화면 업데이트 과정</span> <br><br>&nbsp; 
+<img src='https://shyprogrammer351.github.io/ig3i/move/sequence_bombDodgeGame_actionPerformed.jpg' width='500'> <br> &nbsp; <br> &nbsp;
+<img src='https://shyprogrammer351.github.io/ig3i/move/sequence_bombDodgeGame_actionPerformed_repaint.jpg' width='500'> <br> &nbsp; 		 				<br><h4>프로그램 코드 <input id='btn' type='button' value='실행순서 및 메모리상태 확인' onclick='sP3f5();'/></h4>  				<div id = "codeBox">
+<pre id="codeE001" class="unselectable codeClass">E001	<font color="green">// 이벤트 대기중</font>
 </pre>
-<pre id="codeE002" class="unselectable codeClass">E002		<font color="green">// 잠시 대기 후</font>
+<pre id="codeE002" class="unselectable codeClass">E002	<font color="green">// → 키 입력</font>
 </pre>
-<pre id="codeE003" class="unselectable codeClass">E003		<font color="green">// [상대편]은 임의로 가위를 선택했고 [참여자]가 바위를 선택</font>
-</pre>
-<pre id="codeE004" class="unselectable codeClass">E004		<font color="green">// 잠시 대기 후</font>
-</pre>
-<pre id="codeE005" class="unselectable codeClass">E005		<font color="green">// [참여자]가 프로그램 닫기(우측상단 X) 선택</font>
+<pre id="codeE003" class="unselectable codeClass">E003	<font color="green">// 1초마다 타이머 활성화</font>
 </pre><pre id="code0" class="unselectable codeClass">	 
-</pre><pre id="code0" class="unselectable codeClass">	<font color="green">// 파일명 : ./Chapter14/RockPaperScissorsGUI.java</font>
-</pre><pre id="code0" class="unselectable codeClass">	import javax.swing.JFrame;
-</pre><pre id="code0" class="unselectable codeClass">	import rpsGame.RockPaperScissorsPanel;
+</pre><pre id="code0" class="unselectable codeClass">	<font color="green">// 파일명 : ./Chapter14/BombDodgeGameGUI.java</font>
+</pre><pre id="code0" class="unselectable codeClass">	import javax.swing.*;
+</pre><pre id="code0" class="unselectable codeClass">	import move.*;
 </pre><pre id="code0" class="unselectable codeClass">	 
-</pre><pre id="code0" class="unselectable codeClass">	<font color="green">/************** </font>
-</pre><pre id="code0" class="unselectable codeClass">	 <font color="green">* 가위바위보 게임의 GUI 버전</font>
-</pre><pre id="code0" class="unselectable codeClass">	 <font color="green">* @author So Young Park</font>
-</pre><pre id="code0" class="unselectable codeClass">	 <font color="green">* @version 0.8</font>
-</pre><pre id="code0" class="unselectable codeClass">	 <font color="green">*/</font>
-</pre><pre id="code0" class="unselectable codeClass">	public <a href='../Jf1i/Jf1i0.html' target='keyword'>class</a> RockPaperScissorsGUI
+</pre><pre id="code0" class="unselectable codeClass">	public <a href='../Jf1i/Jf1i0.html' target='keyword'>class</a> BombDodgeGameGUI
 </pre><pre id="code0" class="unselectable codeClass">	{
 </pre>
-<pre id="codeM1b" class="unselectable codeClass">M1b		public static void main( String[] args )
+<pre id="code1" class="unselectable codeClass">1		public static void main( String [] args )
 </pre><pre id="code0" class="unselectable codeClass">		{
-</pre><pre id="code0" class="unselectable codeClass">			final String imagePath = "C:\\Users\\user\\Downloads\\JAVA-main\\src\\rpsGame\\image\\";
-</pre>
-<pre id="codeM11" class="unselectable codeClass">M11			RockPaperScissorsPanel panel =
-</pre>
-<pre id="codeM12" class="unselectable codeClass">M12			                               new RockPaperScissorsPanel( imagePath );
+</pre><pre id="code0" class="unselectable codeClass">			final String imagePath = "C:\\Users\\user\\Downloads\\JAVA-main\\src\\move/\image\\";
+</pre><pre id="code0" class="unselectable codeClass">			final int WIDTH = 300;
+</pre><pre id="code0" class="unselectable codeClass">			final int HEIGHT= 600;
 </pre><pre id="code0" class="unselectable codeClass">	 
-</pre><pre id="code0" class="unselectable codeClass">			JFrame frame = new JFrame( "가위바위보" );
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">// 판을 틀에 끼우고 실행 준비 완료</font>
+</pre>
+<pre id="code2" class="unselectable codeClass">2			BombDodgePanel panel =
+</pre>
+<pre id="code3" class="unselectable codeClass">3			                       new BombDodgePanel(
+</pre>
+<pre id="code4" class="unselectable codeClass">4			                                           new CollidableObject( imagePath+"character.png", WIDTH/2, HEIGHT-40, WIDTH, HEIGHT ), imagePath+"bomb.png" );
+</pre><pre id="code0" class="unselectable codeClass">			JFrame frame = new JFrame ( "폭탄 피하기 게임" );
 </pre><pre id="code0" class="unselectable codeClass">			frame.getContentPane().add( panel );
 </pre><pre id="code0" class="unselectable codeClass">			frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
 </pre><pre id="code0" class="unselectable codeClass">			frame.pack();
 </pre><pre id="code0" class="unselectable codeClass">			frame.setVisible( true );
 </pre>
-<pre id="codeM13" class="unselectable codeClass">M13			<font color="green">// 이벤트 발생시 처리 준비중</font>
-</pre>
-<pre id="codeM1e" class="unselectable codeClass">M1e		}
+<pre id="code5" class="unselectable codeClass">5		}
 </pre><pre id="code0" class="unselectable codeClass">	}
 </pre><pre id="code0" class="unselectable codeClass">	 
-</pre><pre id="code0" class="unselectable codeClass">	<font color="green">// 파일명 : ./src/rpsGame/RockPaperScissorsPanel.java</font>
-</pre><pre id="code0" class="unselectable codeClass">	package rpsGame;
+</pre><pre id="code0" class="unselectable codeClass">	<font color="green">// 파일명 : ./src/move/ViewPanel.java</font>
+</pre><pre id="code0" class="unselectable codeClass">	package move;
+</pre><pre id="code0" class="unselectable codeClass">	 
 </pre><pre id="code0" class="unselectable codeClass">	import java.awt.*;
 </pre><pre id="code0" class="unselectable codeClass">	import java.awt.event.*;
 </pre><pre id="code0" class="unselectable codeClass">	import javax.swing.*;
 </pre><pre id="code0" class="unselectable codeClass">	 
-</pre><pre id="code0" class="unselectable codeClass">	<font color="green">/** </font>
-</pre><pre id="code0" class="unselectable codeClass">	 <font color="green">* 가위바위보 GUI 패널</font>
-</pre><pre id="code0" class="unselectable codeClass">	 <font color="green">* @author So Young Park</font>
-</pre><pre id="code0" class="unselectable codeClass">	 <font color="green">* @version 0.8</font>
-</pre><pre id="code0" class="unselectable codeClass">	 <font color="green">*/</font>
-</pre><pre id="code0" class="unselectable codeClass">	public <a href='../Jf1i/Jf1i0.html' target='keyword'>class</a> RockPaperScissorsPanel extends JPanel implements ActionListener
+</pre><pre id="code0" class="unselectable codeClass">	<font color="green">//<b> 뷰 패널  </b></font>
+</pre><pre id="code0" class="unselectable codeClass">	public <a href='../Jf1i/Jf1i0.html' target='keyword'>class</a> ViewPanel extends JPanel
 </pre><pre id="code0" class="unselectable codeClass">	{
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/**  </font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 가위바위보</font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
-</pre><pre id="code0" class="unselectable codeClass">		private final int SCISSORS = 0;
-</pre><pre id="code0" class="unselectable codeClass">		private final int ROCK = 1;
-</pre><pre id="code0" class="unselectable codeClass">		private final int PAPER = 2;
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/**  </font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 타이머</font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
-</pre><pre id="code0" class="unselectable codeClass">		private   Timer timer;
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/**  </font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 가위바위보 참여자의 선택 결과를 이미지로 표현</font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
-</pre><pre id="code0" class="unselectable codeClass">		protected JLabel imgPlayerA;
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/**  </font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 가위바위보 상대편의 선택 결과를 이미지로 표현</font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
-</pre><pre id="code0" class="unselectable codeClass">		protected JLabel imgPlayerB;
-</pre><pre id="code0" class="unselectable codeClass">	 
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/**  </font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 가위바위보 참여자와 상대편의 상태를 문자열로 표현</font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
-</pre><pre id="code0" class="unselectable codeClass">		protected JLabel strPlayers;
-</pre><pre id="code0" class="unselectable codeClass">	 
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/**  </font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 가위바위보 버튼</font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
-</pre><pre id="code0" class="unselectable codeClass">		protected JButton[] button;
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/**  </font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 가위바위보 3가지, 미선택 1가지, 승패 2가지를 2차원 배열로 고려하여 총 8(=(3+1)*2)가지 경우의 이미지를 준비</font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
-</pre><pre id="code0" class="unselectable codeClass">		protected ImageIcon[][] image;
+</pre><pre id="code0" class="unselectable codeClass">		protected ObjectByKey character;
+</pre><pre id="code0" class="unselectable codeClass">		protected Timer timer;
 </pre><pre id="code0" class="unselectable codeClass">		 
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/**  </font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 가위바위보 기본 이미지 상수</font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
-</pre><pre id="code0" class="unselectable codeClass">		protected final int BASE = 0;
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/**  </font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 가위바위보 이겼을 때 이미지 상수</font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
-</pre><pre id="code0" class="unselectable codeClass">		protected final int WIN = 1;
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/**  </font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 가위바위보 대기중 물음표 이미지 상수</font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
-</pre><pre id="code0" class="unselectable codeClass">		protected final int QUESTIONMARK = 3;
+</pre>
+<pre id="codeV1b" class="unselectable codeClass">V1b		public ViewPanel( ObjectByKey character ){
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 키리스너에 방향키로 이동하는 캐릭터를 등록   </b></font>
+</pre><pre id="code0" class="unselectable codeClass">			this.character = character;
+</pre><pre id="code0" class="unselectable codeClass">			addKeyListener( character );
+</pre><pre id="code0" class="unselectable codeClass">			setFocusable( true );
+</pre><pre id="code0" class="unselectable codeClass">			requestFocus();
+</pre><pre id="code0" class="unselectable codeClass">			setPreferredSize( new Dimension( character.backgroundWidth(), character.backgroundHeight() ) );
 </pre><pre id="code0" class="unselectable codeClass">	 
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* <b> 가위바위보 GUI 패널 초기화 </b></font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 주기적으로 활성화되는 타이머 등록 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">			timer = new Timer( 100, new ActionListener() {
+</pre><pre id="code0" class="unselectable codeClass">			                	@Override
 </pre>
-<pre id="codeP1b" class="unselectable codeClass">P1b		public RockPaperScissorsPanel( final String imgPath )
-</pre><pre id="code0" class="unselectable codeClass">		{
-</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 가위바위보 3가지, 미선택 1가지, 승패 2가지를 2차원 배열로 고려하여 총 8(=(3+1)*2)가지 경우의 이미지를 준비 </b></font>
-</pre><pre id="code0" class="unselectable codeClass">			image = new ImageIcon[4][2];
-</pre><pre id="code0" class="unselectable codeClass">			image[QUESTIONMARK][BASE] = new ImageIcon( new ImageIcon( imgPath + "questionmark.gif" ).getImage().getScaledInstance( 200, 200, Image.SCALE_SMOOTH ) );
-</pre><pre id="code0" class="unselectable codeClass">			image[QUESTIONMARK][WIN]  = new ImageIcon( new ImageIcon( imgPath + "questionmark.gif" ).getImage().getScaledInstance( 200, 200, Image.SCALE_SMOOTH ) );
-</pre><pre id="code0" class="unselectable codeClass">			image[SCISSORS    ][BASE] = new ImageIcon( new ImageIcon( imgPath + "scissors.gif"     ).getImage().getScaledInstance( 200, 200, Image.SCALE_SMOOTH ) );
-</pre><pre id="code0" class="unselectable codeClass">			image[SCISSORS    ][WIN]  = new ImageIcon( new ImageIcon( imgPath + "scissors_win.gif" ).getImage().getScaledInstance( 200, 200, Image.SCALE_SMOOTH ) );
-</pre><pre id="code0" class="unselectable codeClass">			image[ROCK        ][BASE] = new ImageIcon( new ImageIcon( imgPath + "rock.gif"         ).getImage().getScaledInstance( 200, 200, Image.SCALE_SMOOTH ) );
-</pre><pre id="code0" class="unselectable codeClass">			image[ROCK        ][WIN]  = new ImageIcon( new ImageIcon( imgPath + "rock_win.gif"     ).getImage().getScaledInstance( 200, 200, Image.SCALE_SMOOTH ) );
-</pre><pre id="code0" class="unselectable codeClass">			image[PAPER       ][BASE] = new ImageIcon( new ImageIcon( imgPath + "paper.gif"        ).getImage().getScaledInstance( 200, 200, Image.SCALE_SMOOTH ) );
+<pre id="codeV2b" class="unselectable codeClass">V2b			                	public void actionPerformed( ActionEvent event ) {
 </pre>
-<pre id="codeP11" class="unselectable codeClass">P11			image[PAPER       ][WIN]  = new ImageIcon( new ImageIcon( imgPath + "paper_win.gif"    ).getImage().getScaledInstance( 200, 200, Image.SCALE_SMOOTH ) );
-</pre><pre id="code0" class="unselectable codeClass">				 
-</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 화면 위쪽에 참여자와 상대편의 가위바위보 이미지 초기화 </b></font>
-</pre><pre id="code0" class="unselectable codeClass">			this.strPlayers = new JLabel( "&lt;html&gt;&lt;body&gt;[너]&lt;br&gt;[나]&lt;/body&gt;&lt;/html&gt;", JLabel.CENTER );
-</pre><pre id="code0" class="unselectable codeClass">			this.imgPlayerA = new JLabel( image[QUESTIONMARK][BASE] );
-</pre><pre id="code0" class="unselectable codeClass">			this.imgPlayerB = new JLabel( image[QUESTIONMARK][BASE] );
-</pre><pre id="code0" class="unselectable codeClass">			 
-</pre><pre id="code0" class="unselectable codeClass">			this.add( this.imgPlayerB );
-</pre><pre id="code0" class="unselectable codeClass">			this.add( this.strPlayers );
+<pre id="codeV21" class="unselectable codeClass">V21			                		update();
 </pre>
-<pre id="codeP12" class="unselectable codeClass">P12			this.add( this.imgPlayerA );
-</pre><pre id="code0" class="unselectable codeClass">	 
-</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 화면 아래쪽에 가위바위보 입력 버튼 3개 초기화  </b></font>
-</pre><pre id="code0" class="unselectable codeClass">			button = new JButton[3];
-</pre><pre id="code0" class="unselectable codeClass">			button[SCISSORS] = new JButton( new ImageIcon( image[SCISSORS][BASE].getImage().getScaledInstance( 30, 30, Image.SCALE_SMOOTH ) ) );
-</pre><pre id="code0" class="unselectable codeClass">			button[SCISSORS].addActionListener( this );
-</pre><pre id="code0" class="unselectable codeClass">			button[ROCK] = new JButton( new ImageIcon( image[ROCK][BASE].getImage().getScaledInstance( 30, 30, Image.SCALE_SMOOTH ) ) );
-</pre><pre id="code0" class="unselectable codeClass">			button[ROCK].addActionListener( this );
-</pre><pre id="code0" class="unselectable codeClass">			button[PAPER] = new JButton( new ImageIcon( image[PAPER][BASE].getImage().getScaledInstance( 30, 30, Image.SCALE_SMOOTH ) ) );
-</pre><pre id="code0" class="unselectable codeClass">			button[PAPER].addActionListener( this );
-</pre><pre id="code0" class="unselectable codeClass">	 
-</pre><pre id="code0" class="unselectable codeClass">			this.add( new JLabel("  가위 바위 보를 선택하세요  ") );
-</pre><pre id="code0" class="unselectable codeClass">			this.add( button[SCISSORS] );
-</pre><pre id="code0" class="unselectable codeClass">			this.add( button[ROCK] );
+<pre id="codeV22" class="unselectable codeClass">V22			                		repaint();
 </pre>
-<pre id="codeP13" class="unselectable codeClass">P13			this.add( button[PAPER] );
-</pre><pre id="code0" class="unselectable codeClass">	 
-</pre><pre id="code0" class="unselectable codeClass">			this.setBackground(Color.cyan);
-</pre><pre id="code0" class="unselectable codeClass">			this.setPreferredSize(new Dimension(220, 530));
-</pre><pre id="code0" class="unselectable codeClass">			 
-</pre><pre id="code0" class="unselectable codeClass">			<font color="green">// 가위바위보 선택 후 잠깐 1초 쉬었다가 재시작할 수 있도록 타이머 설정</font>
-</pre><pre id="code0" class="unselectable codeClass">			this.timer = new Timer( 1000, new TimerListener() );
-</pre>
-<pre id="codeP1e" class="unselectable codeClass">P1e		}
-</pre><pre id="code0" class="unselectable codeClass">	 
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 참여자가 버튼을 눌러서 선택한 가위바위보 결과를 int형 자료로 변환</font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* @param event 버튼을 눌러서 선택한 결과</font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* @return 가위바위보 선택 결과</font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
-</pre>
-<pre id="codeP2b" class="unselectable codeClass">P2b		protected int selectRockPaperScissors( ActionEvent event )
-</pre><pre id="code0" class="unselectable codeClass">		{
-</pre><pre id="code0" class="unselectable codeClass">			if( event.getSource() == button[SCISSORS] )
-</pre><pre id="code0" class="unselectable codeClass">				return SCISSORS;
-</pre><pre id="code0" class="unselectable codeClass">			else if ( event.getSource() == button[ROCK] )
-</pre><pre id="code0" class="unselectable codeClass">				return ROCK;
-</pre><pre id="code0" class="unselectable codeClass">			else
-</pre><pre id="code0" class="unselectable codeClass">				return PAPER;
-</pre>
-<pre id="codeP2e" class="unselectable codeClass">P2e		}
-</pre><pre id="code0" class="unselectable codeClass">		 
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 임의로 가위바위보 중에서 하나를 선택</font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* @return 가위(0), 바위(1), 보(2) 중 임의의 값</font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
-</pre>
-<pre id="codeG1" class="unselectable codeClass">G1		protected int selectRockPaperScissors()
-</pre><pre id="code0" class="unselectable codeClass">		{
-</pre><pre id="code0" class="unselectable codeClass">			return (int)(Math.random()*3);
-</pre>
-<pre id="codeG2" class="unselectable codeClass">G2		}
-</pre><pre id="code0" class="unselectable codeClass">	 
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 가위바위보 참여자와 상대편의 선택 결과를 바탕으로 승패 판정</font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* @param playerA 가위바위보 참여자의 선택 결과</font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* @param playerB 가위바위보 상대편의 선택 결과</font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* @return 가위바위보 승패 판정 결과</font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
-</pre>
-<pre id="codeG3" class="unselectable codeClass">G3		protected String judge( int playerA, int playerB )
-</pre><pre id="code0" class="unselectable codeClass">		{
-</pre><pre id="code0" class="unselectable codeClass">			if ( playerA == playerB )
-</pre><pre id="code0" class="unselectable codeClass">			{
-</pre><pre id="code0" class="unselectable codeClass">				return "상대편과 참여자가 비겼습니다";
-</pre><pre id="code0" class="unselectable codeClass">			}
-</pre><pre id="code0" class="unselectable codeClass">			else if ( ( ( playerA == SCISSORS ) && ( playerB == PAPER ) )
-</pre><pre id="code0" class="unselectable codeClass">					|| ( ( playerA == ROCK ) && ( playerB == SCISSORS ) )
-</pre><pre id="code0" class="unselectable codeClass">					|| ( ( playerA == PAPER ) && ( playerB == ROCK ) ) )
-</pre><pre id="code0" class="unselectable codeClass">			{
-</pre><pre id="code0" class="unselectable codeClass">				return "참여자가 이겼습니다";
-</pre><pre id="code0" class="unselectable codeClass">			}
-</pre><pre id="code0" class="unselectable codeClass">			else
-</pre><pre id="code0" class="unselectable codeClass">			{
-</pre><pre id="code0" class="unselectable codeClass">				return "상대편이 이겼습니다";
-</pre><pre id="code0" class="unselectable codeClass">			}
-</pre>
-<pre id="codeG4" class="unselectable codeClass">G4		}
-</pre><pre id="code0" class="unselectable codeClass">		 
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 가위바위보 선택 결과를 분석하여 누가 이겼는지 표기</font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
-</pre>
-<pre id="codeP3b" class="unselectable codeClass">P3b		protected void showGameResult( int playerA, int playerB )
-</pre><pre id="code0" class="unselectable codeClass">		{
-</pre>
-<pre id="codeP31" class="unselectable codeClass">P31			String result =
-</pre>
-<pre id="codeP32" class="unselectable codeClass">P32			                judge( playerA, playerB );
-</pre><pre id="code0" class="unselectable codeClass">			int playerA_winOrLose = BASE, playerB_winOrLose = BASE;
-</pre><pre id="code0" class="unselectable codeClass">			if ( result.contains( "참여자가 이겼습니다" ) )
-</pre><pre id="code0" class="unselectable codeClass">			{
-</pre><pre id="code0" class="unselectable codeClass">				playerA_winOrLose = WIN;
-</pre><pre id="code0" class="unselectable codeClass">				playerB_winOrLose = BASE;
-</pre><pre id="code0" class="unselectable codeClass">			}
-</pre><pre id="code0" class="unselectable codeClass">			else if ( result.contains( "상대편이 이겼습니다" ) )
-</pre><pre id="code0" class="unselectable codeClass">			{
-</pre><pre id="code0" class="unselectable codeClass">				playerA_winOrLose = BASE;
-</pre><pre id="code0" class="unselectable codeClass">				playerB_winOrLose = WIN;
-</pre><pre id="code0" class="unselectable codeClass">			}
-</pre><pre id="code0" class="unselectable codeClass">			else
-</pre><pre id="code0" class="unselectable codeClass">			{
-</pre><pre id="code0" class="unselectable codeClass">				playerA_winOrLose = BASE;
-</pre><pre id="code0" class="unselectable codeClass">				playerB_winOrLose = BASE;
-</pre><pre id="code0" class="unselectable codeClass">			}
-</pre><pre id="code0" class="unselectable codeClass">			 
-</pre><pre id="code0" class="unselectable codeClass">			imgPlayerA.setIcon( image[ playerA ][ playerA_winOrLose ] );
-</pre><pre id="code0" class="unselectable codeClass">			imgPlayerB.setIcon( image[ playerB ][ playerB_winOrLose ] );
-</pre>
-<pre id="codeP3e" class="unselectable codeClass">P3e		}
-</pre><pre id="code0" class="unselectable codeClass">		 
-</pre><pre id="code0" class="unselectable codeClass">		public void disableSelection()
-</pre><pre id="code0" class="unselectable codeClass">		{
-</pre><pre id="code0" class="unselectable codeClass">			button[0].setEnabled( false );
-</pre><pre id="code0" class="unselectable codeClass">			button[1].setEnabled( false );
-</pre><pre id="code0" class="unselectable codeClass">			button[2].setEnabled( false );
-</pre><pre id="code0" class="unselectable codeClass">		}
-</pre><pre id="code0" class="unselectable codeClass">	 
-</pre><pre id="code0" class="unselectable codeClass">		public void enableSelection()
-</pre><pre id="code0" class="unselectable codeClass">		{
-</pre><pre id="code0" class="unselectable codeClass">			button[0].setEnabled( true );
-</pre><pre id="code0" class="unselectable codeClass">			button[1].setEnabled( true );
-</pre><pre id="code0" class="unselectable codeClass">			button[2].setEnabled( true );
-</pre><pre id="code0" class="unselectable codeClass">		}
-</pre><pre id="code0" class="unselectable codeClass">			 
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* <b> 참여자가 가위바위보를 선택시 상대편 선택과 비교하여 승패 결과를 제시하고 게임 상황 업데이트 </b></font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* @param event : 참여자의 가위바위보 선택 결과</font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
-</pre>
-<pre id="codeP5b" class="unselectable codeClass">P5b		public void actionPerformed( ActionEvent event )
-</pre><pre id="code0" class="unselectable codeClass">		{
-</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 참여자가 먼저 가위바위보 내기 </b></font>
-</pre>
-<pre id="codeP51" class="unselectable codeClass">P51			int playerA =
-</pre>
-<pre id="codeP52" class="unselectable codeClass">P52			             selectRockPaperScissors( event );
-</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 상대편도 임의로 가위바위보 내기 </b></font>
-</pre>
-<pre id="codeP53" class="unselectable codeClass">P53			int playerB =
-</pre>
-<pre id="codeP54" class="unselectable codeClass">P54			             selectRockPaperScissors();
-</pre><pre id="code0" class="unselectable codeClass">	 
-</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 승패 결과를 GUI 화면에 업데이트 </b></font>
-</pre>
-<pre id="codeP55" class="unselectable codeClass">P55			showGameResult( playerA, playerB );
-</pre><pre id="code0" class="unselectable codeClass">			 
-</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 다음 판은 잠시 대기 </b></font>
-</pre><pre id="code0" class="unselectable codeClass">			disableSelection();
+<pre id="codeV2e" class="unselectable codeClass">V2e			                	}
+</pre><pre id="code0" class="unselectable codeClass">			                });
 </pre><pre id="code0" class="unselectable codeClass">			timer.start();
 </pre>
-<pre id="codeP5e" class="unselectable codeClass">P5e		}
+<pre id="codeV1e" class="unselectable codeClass">V1e		}
 </pre><pre id="code0" class="unselectable codeClass">		 
-</pre><pre id="code0" class="unselectable codeClass">		<font color="green">/** </font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">* 타이머 클래스</font>
-</pre><pre id="code0" class="unselectable codeClass">		 <font color="green">*/</font>
-</pre><pre id="code0" class="unselectable codeClass">		private <a href='../Jf1i/Jf1i0.html' target='keyword'>class</a> TimerListener implements ActionListener
-</pre><pre id="code0" class="unselectable codeClass">		{
-</pre><pre id="code0" class="unselectable codeClass">			<font color="green">/** </font>
-</pre><pre id="code0" class="unselectable codeClass">			 <font color="green">* <b> 잠시 대기후 다음 판 허용 </b></font>
-</pre><pre id="code0" class="unselectable codeClass">			 <font color="green">*/</font>
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 최신 정보 업데이트  </b></font>
 </pre>
-<pre id="codeP8b" class="unselectable codeClass">P8b			public void actionPerformed( ActionEvent event )
-</pre><pre id="code0" class="unselectable codeClass">			{
+<pre id="codeV3b" class="unselectable codeClass">V3b		protected void update() {
+</pre>
+<pre id="codeV31" class="unselectable codeClass">V31			character.move();
+</pre>
+<pre id="codeV3e" class="unselectable codeClass">V3e		}
+</pre><pre id="code0" class="unselectable codeClass">		 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 화면 출력 </b></font>
+</pre>
+<pre id="codeV4b" class="unselectable codeClass">V4b		public void paint( Graphics g ){
+</pre><pre id="code0" class="unselectable codeClass">			super.paint( g );
+</pre>
+<pre id="codeV41" class="unselectable codeClass">V41			character.paint( g );
+</pre>
+<pre id="codeV4e" class="unselectable codeClass">V4e		}
+</pre><pre id="code0" class="unselectable codeClass">	}
+</pre><pre id="code0" class="unselectable codeClass"> 
+</pre><pre id="code0" class="unselectable codeClass"> 
+</pre><pre id="code0" class="unselectable codeClass">	<font color="green">// 파일명 : ./src/move/BombDodgePanel.java</font>
+</pre><pre id="code0" class="unselectable codeClass">	package move;
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">	import java.awt.*;
+</pre><pre id="code0" class="unselectable codeClass">	import java.util.ArrayList;
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">	<font color="green">//<b> 폭탄 피하기 패널 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">	public <a href='../Jf1i/Jf1i0.html' target='keyword'>class</a> BombDodgePanel extends ViewPanel
+</pre><pre id="code0" class="unselectable codeClass">	{
+</pre><pre id="code0" class="unselectable codeClass">		protected ArrayList&lt;CollidableObject&gt; bombs;
+</pre><pre id="code0" class="unselectable codeClass">		protected int characterHP, time, width, height;
+</pre><pre id="code0" class="unselectable codeClass">		protected String imageBomb;
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre>
+<pre id="codeB1b" class="unselectable codeClass">B1b		public BombDodgePanel( CollidableObject character, final String imageBomb ) {
+</pre>
+<pre id="codeB11" class="unselectable codeClass">B11			super( character );
+</pre><pre id="code0" class="unselectable codeClass">			this.characterHP = 5;
+</pre><pre id="code0" class="unselectable codeClass">			this.bombs = new ArrayList&lt;CollidableObject&gt;();
+</pre><pre id="code0" class="unselectable codeClass">			this.imageBomb = imageBomb;
+</pre><pre id="code0" class="unselectable codeClass">			this.width = character.backgroundWidth();
+</pre><pre id="code0" class="unselectable codeClass">			this.height= character.backgroundHeight();
+</pre><pre id="code0" class="unselectable codeClass">			this.time = 300;
+</pre><pre id="code0" class="unselectable codeClass">			setBackground( Color.white );
+</pre><pre id="code0" class="unselectable codeClass">			setPreferredSize( new Dimension( width+40, height ) );
+</pre>
+<pre id="codeB1e" class="unselectable codeClass">B1e		}
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 최신 정보 업데이트  </b></font>
+</pre>
+<pre id="codeB2b" class="unselectable codeClass">B2b		protected void update() {
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 모든 폭탄은 아래로 떨어지며, 일정 시간마다 새 폭탄을 투하 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">			for ( CollidableObject bomb : bombs )
+</pre>
+<pre id="codeB21" class="unselectable codeClass">B21				bomb.move();
+</pre><pre id="code0" class="unselectable codeClass">			if ( ( ( time-- ) % 8 ) == 0 ) {
+</pre><pre id="code0" class="unselectable codeClass">				bombs.add( new CollidableObject( CollidableObject.STOP, CollidableObject.DOWN, imageBomb, width, height ) );
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre><pre id="code0" class="unselectable codeClass">			 
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 캐릭터는 이동하고 HP 업데이트 </b></font>
+</pre>
+<pre id="codeB22" class="unselectable codeClass">B22			character.move( character.directionX(), CollidableObject.STOP );
+</pre>
+<pre id="codeB23" class="unselectable codeClass">B23			updateHP();
+</pre>
+<pre id="codeB2e" class="unselectable codeClass">B2e		}
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre>
+<pre id="codeB3b" class="unselectable codeClass">B3b		protected void updateHP() {
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 캐릭터와 폭탄이 충돌하면 캐릭터 HP 감소 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">			for ( int i = 0; i &lt; bombs.size(); i++ ) {
+</pre><pre id="code0" class="unselectable codeClass">				CollidableObject bomb = bombs.get(i);
+</pre>
+<pre id="codeB31" class="unselectable codeClass">B31				if ( ( bomb.collide( character ) == true ) ) {
+</pre><pre id="code0" class="unselectable codeClass">					characterHP--;
+</pre><pre id="code0" class="unselectable codeClass">					bombs.remove( bomb );
+</pre><pre id="code0" class="unselectable codeClass">				}
+</pre><pre id="code0" class="unselectable codeClass">				<font color="green">// 이동 허용 범위를 벗어난 폭탄은 제거</font>
+</pre><pre id="code0" class="unselectable codeClass">				else if ( ( bomb.collide()
+</pre><pre id="code0" class="unselectable codeClass">				                           == true ) ) {
+</pre><pre id="code0" class="unselectable codeClass">					bombs.remove( bomb );
+</pre><pre id="code0" class="unselectable codeClass">				}
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre>
+<pre id="codeB3e" class="unselectable codeClass">B3e		}
+</pre><pre id="code0" class="unselectable codeClass">		 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 화면 출력  </b></font>
+</pre>
+<pre id="codeB4b" class="unselectable codeClass">B4b		public void paint( Graphics g ) {
+</pre><pre id="code0" class="unselectable codeClass">			super.paint( g );
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 먼저, 제한시간동안 폭탄을 피해 살아남으면 성공 출력 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">			if ( this.time &lt;= 0 ) {
+</pre><pre id="code0" class="unselectable codeClass">				g.setColor( Color.black );
+</pre><pre id="code0" class="unselectable codeClass">				g.setFont( new Font( "Arial", Font.BOLD, 40 ) );
+</pre><pre id="code0" class="unselectable codeClass">				g.drawString( "Success!", width/2-80, height/2 );
 </pre><pre id="code0" class="unselectable codeClass">				timer.stop();
-</pre><pre id="code0" class="unselectable codeClass">				imgPlayerB.setIcon( image[QUESTIONMARK][BASE] );
-</pre><pre id="code0" class="unselectable codeClass">				enableSelection();
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 또는, HP가 더 이상 없으면 실패 출력 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">			else if ( this.characterHP &lt;= 0 ) {
+</pre><pre id="code0" class="unselectable codeClass">				g.setColor( Color.black );
+</pre><pre id="code0" class="unselectable codeClass">				g.setFont( new Font( "Arial", Font.BOLD, 40 ) );
+</pre><pre id="code0" class="unselectable codeClass">				g.drawString( "Game Over!", width/2-100, height/2 );
+</pre><pre id="code0" class="unselectable codeClass">				timer.stop();
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 아니면, 캐릭터 및 폭탄의 현재 게임 상황 출력 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">			else {
+</pre><pre id="code0" class="unselectable codeClass">				g.setColor( Color.black );
+</pre><pre id="code0" class="unselectable codeClass">				g.setFont( new Font( "Arial", Font.BOLD, 20 ) );
+</pre><pre id="code0" class="unselectable codeClass">				g.drawString( "HP : " + hp(), 10, 30 );
 </pre>
-<pre id="codeP8e" class="unselectable codeClass">P8e			}
+<pre id="codeB41" class="unselectable codeClass">B41				character.paint( g );
+</pre><pre id="code0" class="unselectable codeClass">				for ( CollidableObject bomb : bombs )
+</pre>
+<pre id="codeB42" class="unselectable codeClass">B42					bomb.paint( g );
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre>
+<pre id="codeB4e" class="unselectable codeClass">B4e		}
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">		public String hp() {
+</pre><pre id="code0" class="unselectable codeClass">			switch( this.characterHP ) {
+</pre><pre id="code0" class="unselectable codeClass">			case 5:
+</pre><pre id="code0" class="unselectable codeClass">				return "● ● ● ● ●";
+</pre><pre id="code0" class="unselectable codeClass">			case 4:
+</pre><pre id="code0" class="unselectable codeClass">				return "● ● ● ● ○";
+</pre><pre id="code0" class="unselectable codeClass">			case 3:
+</pre><pre id="code0" class="unselectable codeClass">				return "● ● ● ○ ○";
+</pre><pre id="code0" class="unselectable codeClass">			case 2:
+</pre><pre id="code0" class="unselectable codeClass">				return "● ● ○ ○ ○";
+</pre><pre id="code0" class="unselectable codeClass">			case 1:
+</pre><pre id="code0" class="unselectable codeClass">				return "● ○ ○ ○ ○";
+</pre><pre id="code0" class="unselectable codeClass">			default:
+</pre><pre id="code0" class="unselectable codeClass">				return "○ ○ ○ ○ ○";
+</pre><pre id="code0" class="unselectable codeClass">			}
 </pre><pre id="code0" class="unselectable codeClass">		}
+</pre><pre id="code0" class="unselectable codeClass">	}
+</pre><pre id="code0" class="unselectable codeClass"> 
+</pre><pre id="code0" class="unselectable codeClass"> 
+</pre><pre id="code0" class="unselectable codeClass">	<font color="green">// 파일명 : ./src/move/ObjectByKey.java</font>
+</pre><pre id="code0" class="unselectable codeClass">	package move;
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">	import java.awt.*;
+</pre><pre id="code0" class="unselectable codeClass">	import java.awt.event.*;
+</pre><pre id="code0" class="unselectable codeClass">	import javax.swing.*;
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">	<font color="green">//<b> 방향키로 이동하는 객체 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">	public <a href='../Jf1i/Jf1i0.html' target='keyword'>class</a> ObjectByKey extends KeyAdapter
+</pre><pre id="code0" class="unselectable codeClass">	{
+</pre><pre id="code0" class="unselectable codeClass">		private Image image;
+</pre><pre id="code0" class="unselectable codeClass">		protected int x, y, directionX, directionY;
+</pre><pre id="code0" class="unselectable codeClass">		protected int minX, minY, maxX, maxY;
+</pre><pre id="code0" class="unselectable codeClass">		public static final int UP = -1, DOWN = 1, LEFT = -1, RIGHT = 1, STOP = 0, IMGSIZE = 40;
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre>
+<pre id="codeK1b" class="unselectable codeClass">K1b		public ObjectByKey( String image, int x, int y, int minX, int minY, int maxX, int maxY ) {
+</pre><pre id="code0" class="unselectable codeClass">			this.image = new ImageIcon( image ).getImage();
+</pre><pre id="code0" class="unselectable codeClass">			this.x = x;
+</pre><pre id="code0" class="unselectable codeClass">			this.y = y;
+</pre><pre id="code0" class="unselectable codeClass">			this.minX = minX;
+</pre><pre id="code0" class="unselectable codeClass">			this.minY = minY;
+</pre><pre id="code0" class="unselectable codeClass">			this.maxX = maxX;
+</pre><pre id="code0" class="unselectable codeClass">			this.maxY = maxY;
+</pre><pre id="code0" class="unselectable codeClass">			this.directionX = STOP;
+</pre><pre id="code0" class="unselectable codeClass">			this.directionY = STOP;
+</pre>
+<pre id="codeK1e" class="unselectable codeClass">K1e		}
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 키를 입력하면 상하좌우 이동방향 설정 </b></font>
+</pre>
+<pre id="codeK2b" class="unselectable codeClass">K2b		public void keyPressed( KeyEvent event ) {
+</pre><pre id="code0" class="unselectable codeClass">			switch( event.getKeyCode() ) {
+</pre><pre id="code0" class="unselectable codeClass">			case KeyEvent.VK_ESCAPE:
+</pre><pre id="code0" class="unselectable codeClass">				System.exit(0);
+</pre><pre id="code0" class="unselectable codeClass">				break;
+</pre><pre id="code0" class="unselectable codeClass">			case KeyEvent.VK_LEFT: case 'A': case 'a':
+</pre><pre id="code0" class="unselectable codeClass">				directionX = LEFT;
+</pre><pre id="code0" class="unselectable codeClass">				break;
+</pre><pre id="code0" class="unselectable codeClass">			case KeyEvent.VK_RIGHT: case 'D': case 'd':
+</pre>
+<pre id="codeK21" class="unselectable codeClass">K21				directionX = RIGHT;
+</pre><pre id="code0" class="unselectable codeClass">				break;
+</pre><pre id="code0" class="unselectable codeClass">			case KeyEvent.VK_UP: case 'W': case 'w':
+</pre><pre id="code0" class="unselectable codeClass">				directionY = UP;
+</pre><pre id="code0" class="unselectable codeClass">				break;
+</pre><pre id="code0" class="unselectable codeClass">			case KeyEvent.VK_DOWN: case 'S': case 's':
+</pre>
+<pre id="codeK22" class="unselectable codeClass">K22				directionY = DOWN;
+</pre><pre id="code0" class="unselectable codeClass">				break;
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre>
+<pre id="codeK2e" class="unselectable codeClass">K2e		}
+</pre><pre id="code0" class="unselectable codeClass">		 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 키를 해제하면 이동 멈춤 설정  </b></font>
+</pre>
+<pre id="codeK3b" class="unselectable codeClass">K3b		public void keyReleased( KeyEvent event ) {
+</pre><pre id="code0" class="unselectable codeClass">			switch( event.getKeyCode() ) {
+</pre><pre id="code0" class="unselectable codeClass">			case KeyEvent.VK_LEFT: case 'A': case 'a':
+</pre><pre id="code0" class="unselectable codeClass">			case KeyEvent.VK_RIGHT: case 'D': case 'd':
+</pre>
+<pre id="codeK31" class="unselectable codeClass">K31				directionX = STOP;
+</pre><pre id="code0" class="unselectable codeClass">				break;
+</pre><pre id="code0" class="unselectable codeClass">			case KeyEvent.VK_UP: case 'W': case 'w':
+</pre><pre id="code0" class="unselectable codeClass">			case KeyEvent.VK_DOWN: case 'S': case 's':
+</pre><pre id="code0" class="unselectable codeClass">				directionY = STOP;
+</pre><pre id="code0" class="unselectable codeClass">				break;
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre>
+<pre id="codeK3e" class="unselectable codeClass">K3e		}
+</pre><pre id="code0" class="unselectable codeClass">		 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 이동 허용 범위내에서만 객체 이동 </b></font>
+</pre>
+<pre id="codeK4b" class="unselectable codeClass">K4b		public void move() {
+</pre>
+<pre id="codeK41" class="unselectable codeClass">K41			move( directionX, directionY );
+</pre>
+<pre id="codeK4e" class="unselectable codeClass">K4e		}
+</pre>
+<pre id="codeK5b" class="unselectable codeClass">K5b		public void move( int directionX, int directionY ) {
+</pre><pre id="code0" class="unselectable codeClass">			this.x += directionX;
+</pre><pre id="code0" class="unselectable codeClass">			this.y += directionY;
+</pre><pre id="code0" class="unselectable codeClass">			this.x = ( this.x &lt;= minX ) ? minX : this.x;
+</pre><pre id="code0" class="unselectable codeClass">			this.y = ( this.y &lt;= minY ) ? minY : this.y;
+</pre><pre id="code0" class="unselectable codeClass">			this.x = ( this.x &gt;= maxX ) ? maxX : this.x;
+</pre><pre id="code0" class="unselectable codeClass">			this.y = ( this.y &gt;= maxY ) ? maxY : this.y;
+</pre>
+<pre id="codeK5e" class="unselectable codeClass">K5e		}
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">// 현재 위치에 객체를 출력</font>
+</pre>
+<pre id="codeK6b" class="unselectable codeClass">K6b		public void paint( Graphics g ) {
+</pre><pre id="code0" class="unselectable codeClass">			g.drawImage( image, x, y, IMGSIZE, IMGSIZE, null );
+</pre>
+<pre id="codeK6e" class="unselectable codeClass">K6e		}
+</pre><pre id="code0" class="unselectable codeClass">			 
+</pre><pre id="code0" class="unselectable codeClass">		public int directionX() {
+</pre><pre id="code0" class="unselectable codeClass">			return directionX;
+</pre><pre id="code0" class="unselectable codeClass">		}
+</pre><pre id="code0" class="unselectable codeClass">	 
+</pre><pre id="code0" class="unselectable codeClass">		public int directionY() {
+</pre><pre id="code0" class="unselectable codeClass">			return directionY;
+</pre><pre id="code0" class="unselectable codeClass">		}
+</pre><pre id="code0" class="unselectable codeClass">		 
+</pre><pre id="code0" class="unselectable codeClass">		public int backgroundWidth(){
+</pre><pre id="code0" class="unselectable codeClass">			return maxX;
+</pre><pre id="code0" class="unselectable codeClass">		}
+</pre><pre id="code0" class="unselectable codeClass">		 
+</pre><pre id="code0" class="unselectable codeClass">		public int backgroundHeight(){
+</pre><pre id="code0" class="unselectable codeClass">			return maxY;
+</pre><pre id="code0" class="unselectable codeClass">		}
+</pre><pre id="code0" class="unselectable codeClass">	}
+</pre><pre id="code0" class="unselectable codeClass"> 
+</pre><pre id="code0" class="unselectable codeClass"> 
+</pre><pre id="code0" class="unselectable codeClass">	<font color="green">// 파일명 : ./src/move/CollidableObject.java</font>
+</pre><pre id="code0" class="unselectable codeClass">	package move;
+</pre><pre id="code0" class="unselectable codeClass">		 
+</pre><pre id="code0" class="unselectable codeClass">	<font color="green">//<b> 충돌가능한 객체 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">	public <a href='../Jf1i/Jf1i0.html' target='keyword'>class</a> CollidableObject extends ObjectByKey
+</pre><pre id="code0" class="unselectable codeClass">	{
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 캐릭터 초기화 : 이미지, 현재 위치, 이동 허용 범위를 설정  </b></font>
+</pre>
+<pre id="codeC1b" class="unselectable codeClass">C1b		public CollidableObject( final String image, int x, int y, int width, int height ) {
+</pre>
+<pre id="codeC11" class="unselectable codeClass">C11			super( image, x, y, 0, 20, width, height );
+</pre>
+<pre id="codeC1e" class="unselectable codeClass">C1e		}
+</pre>
+<pre id="codeC2b" class="unselectable codeClass">C2b		public CollidableObject( int directionX, int directionY, final String image, int width, int height ) {
+</pre>
+<pre id="codeC21" class="unselectable codeClass">C21			this( image, 0, 40, width, height );
+</pre><pre id="code0" class="unselectable codeClass">			this.directionX = directionX;
+</pre><pre id="code0" class="unselectable codeClass">			this.directionY = directionY;
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 폭탄 초기화 : 위쪽(임의위치)에서 아래쪽으로 폭탄을 투하 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">			if ( ( directionX == STOP ) && ( directionY == DOWN ) ) {
+</pre><pre id="code0" class="unselectable codeClass">				this.x = (int)( Math.random() * this.maxX );
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 총알 초기화 : 왼쪽(임의위치)에서 오른쪽으로 총알을 발사 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">			else if ( ( directionX == RIGHT ) && ( directionY == STOP ) ) {
+</pre><pre id="code0" class="unselectable codeClass">				this.y = 40 + (int)( Math.random() * ( this.maxY-40 ) );
+</pre><pre id="code0" class="unselectable codeClass">			}
+</pre>
+<pre id="codeC2e" class="unselectable codeClass">C2e		}
+</pre><pre id="code0" class="unselectable codeClass">		 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">// 일정 속도 위치 이동</font>
+</pre>
+<pre id="codeC3b" class="unselectable codeClass">C3b		public void move( int directionX, int directionY ) {
+</pre><pre id="code0" class="unselectable codeClass">			final int SPEED = 20;
+</pre>
+<pre id="codeC31" class="unselectable codeClass">C31			super.move( directionX * SPEED, directionY * SPEED );
+</pre>
+<pre id="codeC3e" class="unselectable codeClass">C3e		}
+</pre><pre id="code0" class="unselectable codeClass">		 
+</pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 이동 허용 범위를 벗어나거나 다른 객체와 충돌하는지 여부 확인 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		public boolean collide() {
+</pre><pre id="code0" class="unselectable codeClass">			return ( this.x &lt; minX ) || ( maxX &lt; this.x ) || ( this.y &lt; minY ) || ( maxY &lt; this.y );
+</pre><pre id="code0" class="unselectable codeClass">		}
+</pre>
+<pre id="codeC4b" class="unselectable codeClass">C4b		public boolean collide( ObjectByKey that ) {
+</pre><pre id="code0" class="unselectable codeClass">			return ( Math.abs( this.x - that.x ) &lt; IMGSIZE ) && ( Math.abs( this.y - that.y ) &lt; IMGSIZE );
+</pre>
+<pre id="codeC4e" class="unselectable codeClass">C4e		}
 </pre><pre id="code0" class="unselectable codeClass">	}
 </pre></div>	 	 				<br><h4>실행 순서</h4> 				<pre id = "sP3d4" style='white-space:normal; width:800px;'> </pre> 				<pre style='white-space:normal;'> 					※ 실행순서 및 메모리상태는 A키(이전) 및 D키(다음)를 눌러도 확인할 수 있습니다  				</pre> 				<br><br><br><br><br><br><br><br> &nbsp;  			</div> 			<div id = "floatingBox" style = "top:200px;left:900px;margin:0px;padding:0px;"> 				<pre id = "outputBox" class ="outputBox" style = "color:White;height:0px;width:0px;padding:0px;margin:0px;"></pre>  				<div id = "intermediateResult"> 					<img id = "sP3d7"> 					<table style = "border-spacing:0px;margin:0px;table-layout:auto;"> 						<tbody id = "sP3d8"></tbody> 					</table> 				</div> 			</div> 		</div> 	</body> </html> 
