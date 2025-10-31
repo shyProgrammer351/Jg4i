@@ -71,6 +71,7 @@
 </pre><pre id="codeV31" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('V31')">V31			character.move();
 </pre><pre id="codeV3e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('V3e')">V3e		}
 </pre><pre id="code0" class="unselectable codeClass">		
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre><pre id="codeV4b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('V4b')">V4b		public void paint( Graphics g ){
 </pre><pre id="code0" class="unselectable codeClass">			super.paint( g );
 </pre><pre id="codeV41" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('V41')">V41			character.paint( g );
@@ -91,6 +92,7 @@
 </pre><pre id="codeS11" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('S11')">S11			super( map, x, y, imagePath );
 </pre><pre id="codeS1e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('S1e')">S1e		}
 
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre><pre id="codeS2b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('S2b')">S2b		public void keyPressed( KeyEvent event ) {
 </pre><pre id="codeS21" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('S21')">S21			super.keyPressed( event );
 </pre><pre id="code0" class="unselectable codeClass">			switch( event.getKeyCode() ) {
@@ -112,11 +114,13 @@
 </pre><pre id="codeS31" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('S31')">S31			move( directionX, UP*JUMP_HEIGHT );
 </pre><pre id="codeS3e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('S3e')">S3e		}
 </pre><pre id="code0" class="unselectable codeClass">		
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre><pre id="codeS4b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('S4b')">S4b		public void move( int directionX, int directionY ) {
 </pre><pre id="code0" class="unselectable codeClass">			for(; ( map[y+directionY][x+directionX] != WALL ) && ( map[y+directionY+1][x+directionX] != WALL ); directionY++ );
 </pre><pre id="codeS41" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('S41')">S41			super.move( directionX, directionY );
 </pre><pre id="codeS4e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('S4e')">S4e		}
 
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre><pre id="codeS5b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('S5b')">S5b		public void paint( Graphics g ){
 </pre><pre id="code0" class="unselectable codeClass">			for( int y = this.y - SCOPE, y2 = 0; y &lt;= this.y + SCOPE; y++, y2++ ){
 </pre><pre id="code0" class="unselectable codeClass">				for( int x = this.x - SCOPE, x2 = 0; x &lt;= this.x + SCOPE; x++, x2++ ){
@@ -130,9 +134,11 @@
 </pre><pre id="code0" class="unselectable codeClass">			}
 </pre><pre id="codeS5e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('S5e')">S5e		}
 </pre><pre id="code0" class="unselectable codeClass">		
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre><pre id="code0" class="unselectable codeClass">		public int backgroundWidth(){
 </pre><pre id="code0" class="unselectable codeClass">			return IMGSIZE * ( 2*SCOPE + 1 );
 </pre><pre id="code0" class="unselectable codeClass">		}
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre><pre id="code0" class="unselectable codeClass">		public int backgroundHeight(){
 </pre><pre id="code0" class="unselectable codeClass">			return IMGSIZE * ( 2*SCOPE + 1 );
 </pre><pre id="code0" class="unselectable codeClass">		}
@@ -159,11 +165,13 @@
 </pre><pre id="code0" class="unselectable codeClass">			this.image[CHARACTER] = new ImageIcon( imagePath + "character.png" ).getImage();
 </pre><pre id="codeT1e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('T1e')">T1e		}
 </pre><pre id="code0" class="unselectable codeClass">		
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre><pre id="codeT2b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('T2b')">T2b		public void move( int directionX, int directionY ) {
 </pre><pre id="code0" class="unselectable codeClass">			if( map[y+directionY][x+directionX] != WALL )
 </pre><pre id="codeT21" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('T21')">T21				super.move( directionX, directionY );
 </pre><pre id="codeT2e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('T2e')">T2e		}
 
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre><pre id="codeT3b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('T3b')">T3b		public void paint( Graphics g ){
 </pre><pre id="code0" class="unselectable codeClass">			for( int y = 0; y &lt;= map.length; y++ ){
 </pre><pre id="code0" class="unselectable codeClass">				for( int x = 0; x &lt;= map[0].length; x++ ){
@@ -177,9 +185,11 @@
 </pre><pre id="code0" class="unselectable codeClass">			}
 </pre><pre id="codeT3e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('T3e')">T3e		}
 </pre><pre id="code0" class="unselectable codeClass">		
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre><pre id="code0" class="unselectable codeClass">		public int backgroundWidth(){
 </pre><pre id="code0" class="unselectable codeClass">			return IMGSIZE * ( map[0].length );
 </pre><pre id="code0" class="unselectable codeClass">		}
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre><pre id="code0" class="unselectable codeClass">		public int backgroundHeight(){
 </pre><pre id="code0" class="unselectable codeClass">			return IMGSIZE * ( map.length );
 </pre><pre id="code0" class="unselectable codeClass">		}
@@ -211,6 +221,7 @@
 </pre><pre id="code0" class="unselectable codeClass">			this.directionY = STOP;
 </pre><pre id="codeK1e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('K1e')">K1e		}
 
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre><pre id="codeK2b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('K2b')">K2b		public void keyPressed( KeyEvent event ) {
 </pre><pre id="code0" class="unselectable codeClass">			switch( event.getKeyCode() ) {
 </pre><pre id="code0" class="unselectable codeClass">			case KeyEvent.VK_ESCAPE:
@@ -231,6 +242,7 @@
 </pre><pre id="code0" class="unselectable codeClass">			}
 </pre><pre id="codeK2e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('K2e')">K2e		}
 </pre><pre id="code0" class="unselectable codeClass">		
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre><pre id="codeK3b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('K3b')">K3b		public void keyReleased( KeyEvent event ) {
 </pre><pre id="code0" class="unselectable codeClass">			switch( event.getKeyCode() ) {
 </pre><pre id="code0" class="unselectable codeClass">			case KeyEvent.VK_LEFT: case 'A': case 'a':

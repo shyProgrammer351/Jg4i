@@ -16,7 +16,7 @@ public <input id='blank0' type='text' style='background-color:Silver; border:0px
  
 		BombDodgePanel panel =  
 		                       new BombDodgePanel(  
-		                                           new CollidableObject( imagePath+"character.png", WIDTH/2, HEIGHT-40, WIDTH, HEIGHT ), imagePath+"bomb.png" ); 
+		                                           new CollidableObject( imagePath+"character.png", WIDTH/2, HEIGHT-CollidableObject.IMGSIZE, WIDTH, HEIGHT ), imagePath+"bomb.png" ); 
 		<input id='blank1' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='6' onchange='sP3f6(1)'> frame = new <input id='blank2' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='6' onchange='sP3f6(2)'> ( "폭탄 피하기 게임" ); 
 		frame.getContentPane().<input id='blank3' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='3' onchange='sP3f6(3)'>( panel ); 
 		frame.setDefaultCloseOperation( <input id='blank4' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='6' onchange='sP3f6(4)'>.EXIT_ON_CLOSE ); 
@@ -57,6 +57,7 @@ public <input id='blank5' type='text' style='background-color:Silver; border:0px
 		character.move(); 
 	} 
 	 
+	@Override 
 	public void <input id='blank10' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='5' onchange='sP3f6(10)'>( Graphics g ){ 
 		<input id='blank11' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='5' onchange='sP3f6(11)'>.<input id='blank12' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='5' onchange='sP3f6(12)'>( g ); 
 		character.<input id='blank13' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='5' onchange='sP3f6(13)'>( g ); 
@@ -82,9 +83,10 @@ public <input id='blank15' type='text' style='background-color:Silver; border:0p
 		<input id='blank24' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='4' onchange='sP3f6(24)'>.height= character.backgroundHeight(); 
 		<input id='blank25' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='4' onchange='sP3f6(25)'>.time = 300; 
 		setBackground( Color.white ); 
-		setPreferredSize( new Dimension( width+40, height ) ); 
+		setPreferredSize( new Dimension( width + CollidableObject.IMGSIZE, height ) ); 
 	} 
  
+	@Override 
 	protected void update() { 
 		for ( CollidableObject bomb : bombs ) 
 			bomb.move(); 
@@ -110,6 +112,7 @@ public <input id='blank15' type='text' style='background-color:Silver; border:0p
 		} 
 	} 
 	 
+	@Override 
 	public void <input id='blank27' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='5' onchange='sP3f6(27)'>( Graphics g ) { 
 		<input id='blank28' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='5' onchange='sP3f6(28)'>.<input id='blank29' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='5' onchange='sP3f6(29)'>( g );	 
 		if ( <input id='blank30' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='4' onchange='sP3f6(30)'>.time &lt;= 0 ) { 
@@ -176,6 +179,7 @@ public <input id='blank35' type='text' style='background-color:Silver; border:0p
 		<input id='blank49' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='4' onchange='sP3f6(49)'>.directionY = STOP; 
 	} 
  
+	@Override 
 	public void <input id='blank50' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='10' onchange='sP3f6(50)'>( <input id='blank51' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='8' onchange='sP3f6(51)'> event ) { 
 		switch( event.<input id='blank52' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='10' onchange='sP3f6(52)'>() ) { 
 		case <input id='blank53' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='8' onchange='sP3f6(53)'>.VK_ESCAPE: 
@@ -196,6 +200,7 @@ public <input id='blank35' type='text' style='background-color:Silver; border:0p
 		} 
 	} 
 	 
+	@Override 
 	public void keyReleased( <input id='blank58' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='8' onchange='sP3f6(58)'> event ) { 
 		switch( event.<input id='blank59' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='10' onchange='sP3f6(59)'>() ) { 
 		case <input id='blank60' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='8' onchange='sP3f6(60)'>.VK_LEFT: case 'A': case 'a': 
@@ -246,7 +251,7 @@ package move;
 public <input id='blank80' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='5' onchange='sP3f6(80)'> CollidableObject <input id='blank81' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='7' onchange='sP3f6(81)'> ObjectByKey  
 { 
 	public CollidableObject( final String image, int x, int y, int width, int height ) { 
-		<input id='blank82' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='5' onchange='sP3f6(82)'>( image, x, y, 0, 20, width, height ); 
+		<input id='blank82' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='5' onchange='sP3f6(82)'>( image, x, y, 0, 40, width, height ); 
 	}		 
 	public CollidableObject( int directionX, int directionY, final String image, int width, int height ) { 
 		<input id='blank83' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='4' onchange='sP3f6(83)'>( image, 0, 40, width, height ); 
@@ -256,10 +261,11 @@ public <input id='blank80' type='text' style='background-color:Silver; border:0p
 			<input id='blank86' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='4' onchange='sP3f6(86)'>.x = (int)( Math.random() * <input id='blank87' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='4' onchange='sP3f6(87)'>.maxX ); 
 		} 
 		else if ( ( directionX == RIGHT ) && ( directionY == STOP ) ) { 
-			<input id='blank88' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='4' onchange='sP3f6(88)'>.y = 40 + (int)( Math.random() * ( <input id='blank89' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='4' onchange='sP3f6(89)'>.maxY-40 ) ); 
+			<input id='blank88' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='4' onchange='sP3f6(88)'>.y = IMGSIZE + (int)( Math.random() * ( <input id='blank89' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='4' onchange='sP3f6(89)'>.maxY - IMGSIZE ) ); 
 		} 
 	}	 
 	 
+	@Override 
 	public void move( int directionX, int directionY ) { 
 		final int SPEED = 20; 
 		<input id='blank90' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='5' onchange='sP3f6(90)'>.move( directionX * SPEED, directionY * SPEED ); 

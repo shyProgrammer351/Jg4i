@@ -4,7 +4,8 @@
 <img width="150" src = "https://shyprogrammer351.github.io/ig3i/move/topView_3.jpg" >
 <pre> 
 </pre><br> 	  				<h4>알고리즘</h4> 				<pre style='white-space:normal;'> 뷰 패널 <br> &nbsp; &nbsp;키리스너에 방향키로 이동하는 캐릭터를 등록 <br> &nbsp; &nbsp;주기적으로 활성화되는 타이머 등록 <br> &nbsp; &nbsp;&nbsp; &nbsp;최신 정보 업데이트 <br> &nbsp; &nbsp;&nbsp; &nbsp;화면 출력 <br> <br> 방향키로 이동하는 객체 <br> &nbsp; &nbsp;키를 누르면 상하좌우 이동방향 설정 <br> &nbsp; &nbsp;키를 해제하면 이동방향 해제 <br> &nbsp; &nbsp;이동 허용 범위내에서만 객체 이동 <br> <br> 탑 뷰 캐릭터 <br> &nbsp; &nbsp;벽이 아니면 캐릭터 이동 <br> &nbsp; &nbsp;캐릭터와 전체 맵을 출력 <br></pre> 				<br><br>&nbsp; <span style='font-family:arial; font-size:14px;'>이미지: 길, 벽, 캐릭터 </span>  <br><br>&nbsp; 
-<img src='https://shyprogrammer351.github.io/ig3i/move/view_image.jpg' width='150'> <br><br>&nbsp; <span style='font-family:arial; font-size:14px;'>탑 뷰 게임의 클래스 다이어그램</span>  <br>&nbsp; 
+<img src='https://shyprogrammer351.github.io/ig3i/move/view_image.jpg' width='150'> <br><br>&nbsp; <span style='font-family:arial; font-size:14px;'>탑 뷰 게임의 클래스 다이어그램</span>  <br><br>&nbsp; 
+<img src='https://shyprogrammer351.github.io/ig3i/move/outline_topViewGame.jpg' width='500'> <br><br>&nbsp; 
 <img src='https://shyprogrammer351.github.io/ig3i/move/sequence_topViewGame.jpg' width='500'> <br>&nbsp; <span style='font-family:arial; font-size:14px;'>탑 뷰 게임의 초기화 과정</span>  <br><br>&nbsp; 
 <img src='https://shyprogrammer351.github.io/ig3i/move/sequence_topViewGame_init.jpg' width='500'> <br><br>&nbsp; <span style='font-family:arial; font-size:14px;'>탑 뷰 게임에서 방향키 입력시 처리 과정</span>   <br><br>&nbsp; 
 <img src='https://shyprogrammer351.github.io/ig3i/move/sequence_topViewGame_keyPressed.jpg' width='500'> <br><br>&nbsp; <span style='font-family:arial; font-size:14px;'>탑 뷰 게임에서 주기적으로 화면 업데이트 과정</span> <br><br>&nbsp; 
@@ -101,6 +102,7 @@
 <pre id="codeV3e" class="unselectable codeClass">V3e		}
 </pre><pre id="code0" class="unselectable codeClass">		 
 </pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 화면 출력 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre>
 <pre id="codeV4b" class="unselectable codeClass">V4b		public void paint( Graphics g ){
 </pre><pre id="code0" class="unselectable codeClass">			super.paint( g );
@@ -137,6 +139,7 @@
 <pre id="codeT1e" class="unselectable codeClass">T1e		}
 </pre><pre id="code0" class="unselectable codeClass">		 
 </pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 벽이 아니면 캐릭터 이동 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre>
 <pre id="codeT2b" class="unselectable codeClass">T2b		public void move( int directionX, int directionY ) {
 </pre><pre id="code0" class="unselectable codeClass">			if( map[y+directionY][x+directionX] != WALL )
@@ -146,6 +149,7 @@
 <pre id="codeT2e" class="unselectable codeClass">T2e		}
 </pre><pre id="code0" class="unselectable codeClass">	 
 </pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 캐릭터와 전체 맵을 출력 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre>
 <pre id="codeT3b" class="unselectable codeClass">T3b		public void paint( Graphics g ){
 </pre><pre id="code0" class="unselectable codeClass">			for( int y = 0; y &lt;= map.length; y++ ){
@@ -161,9 +165,11 @@
 </pre>
 <pre id="codeT3e" class="unselectable codeClass">T3e		}
 </pre><pre id="code0" class="unselectable codeClass">		 
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre><pre id="code0" class="unselectable codeClass">		public int backgroundWidth(){
 </pre><pre id="code0" class="unselectable codeClass">			return IMGSIZE * ( map[0].length );
 </pre><pre id="code0" class="unselectable codeClass">		}
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre><pre id="code0" class="unselectable codeClass">		public int backgroundHeight(){
 </pre><pre id="code0" class="unselectable codeClass">			return IMGSIZE * ( map.length );
 </pre><pre id="code0" class="unselectable codeClass">		}
@@ -201,6 +207,7 @@
 <pre id="codeK1e" class="unselectable codeClass">K1e		}
 </pre><pre id="code0" class="unselectable codeClass">	 
 </pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 키를 누르면 상하좌우 이동방향 설정 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre>
 <pre id="codeK2b" class="unselectable codeClass">K2b		public void keyPressed( KeyEvent event ) {
 </pre><pre id="code0" class="unselectable codeClass">			switch( event.getKeyCode() ) {
@@ -226,6 +233,7 @@
 <pre id="codeK2e" class="unselectable codeClass">K2e		}
 </pre><pre id="code0" class="unselectable codeClass">		 
 </pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 키를 해제하면 이동방향 해제   </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre>
 <pre id="codeK3b" class="unselectable codeClass">K3b		public void keyReleased( KeyEvent event ) {
 </pre><pre id="code0" class="unselectable codeClass">			switch( event.getKeyCode() ) {

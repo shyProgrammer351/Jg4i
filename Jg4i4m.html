@@ -5,9 +5,9 @@
 ② &nbsp; <img src='https://shyprogrammer351.github.io/ig3i/move/sequence_bulletDodgeGame_init.jpg' width='500'/><br>&nbsp; <br>
 <pre style='margin:0;padding:0;'><a href='#1'>1</a>  public static void main( String [] args ) </pre><br>
 
-<pre style='margin:0;padding:0;'><a href='#4'>4</a>                                                  new CollidableObject( imagePath+"character.png", WIDTH-40, HEIGHT/2, WIDTH, HEIGHT ), imagePath+"bullet.png" );</pre><br>
+<pre style='margin:0;padding:0;'><a href='#4'>4</a>                                                  new CollidableObject( imagePath+"character.png", WIDTH-CollidableObject.IMGSIZE, HEIGHT/2, WIDTH, HEIGHT ), imagePath+"bullet.png" );</pre><br>
 <pre style='margin:0;padding:0;'><a href='#C1b'>C1b</a>  public CollidableObject( final String image, int x, int y, int width, int height ) {</pre><br>
-<pre style='margin:0;padding:0;'><a href='#C11'>C11</a>   super( image, x, y, 0, 20, width, height );</pre><br>
+<pre style='margin:0;padding:0;'><a href='#C11'>C11</a>   super( image, x, y, 0, 40, width, height );</pre><br>
 <pre style='margin:0;padding:0;'><a href='#K1b'>K1b</a>  public ObjectByKey( String image, int x, int y, int minX, int minY, int maxX, int maxY ) {</pre><br>
 <pre style='margin:0;padding:0;'><a href='#K1e'>K1e</a>  }</pre><br>
 <pre style='margin:0;padding:0;'><a href='#C1e'>C1e</a>  }  </pre><br>
@@ -99,7 +99,7 @@
 	
 <a href='javascript:history.back();' name='2'>2</a>			BulletDodgePanel panel = 
 <a href='javascript:history.back();' name='3'>3</a>			                         new BulletDodgePanel( 
-<a href='javascript:history.back();' name='4'>4</a>			                                               new CollidableObject( imagePath+"character.png", WIDTH-40, HEIGHT/2, WIDTH, HEIGHT ), imagePath+"bullet.png" );
+<a href='javascript:history.back();' name='4'>4</a>			                                               new CollidableObject( imagePath+"character.png", WIDTH-CollidableObject.IMGSIZE, HEIGHT/2, WIDTH, HEIGHT ), imagePath+"bullet.png" );
 			JFrame frame = new JFrame ( "총알 피하기 게임" );
 			frame.getContentPane().add( panel );
 			frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
@@ -141,6 +141,7 @@
 <a href='javascript:history.back();' name='V31'>V31</a>			character.move();
 <a href='javascript:history.back();' name='V3e'>V3e</a>		}
 		
+		@Override
 <a href='javascript:history.back();' name='V4b'>V4b</a>		public void paint( Graphics g ){
 			super.paint( g );
 <a href='javascript:history.back();' name='V41'>V41</a>			character.paint( g );
@@ -167,9 +168,10 @@
 			this.height= character.backgroundHeight();
 			this.time = 300;
 			setBackground( Color.white );
-			setPreferredSize( new Dimension( width+40, height ) );
+			setPreferredSize( new Dimension( width + CollidableObject.IMGSIZE, height ) );
 <a href='javascript:history.back();' name='B1e'>B1e</a>		}
 	
+		@Override
 <a href='javascript:history.back();' name='B2b'>B2b</a>		protected void update() {
 			for ( CollidableObject bomb : bombs )
 <a href='javascript:history.back();' name='B21'>B21</a>				bomb.move();
@@ -195,6 +197,7 @@
 			}
 <a href='javascript:history.back();' name='B3e'>B3e</a>		}
 		
+		@Override
 <a href='javascript:history.back();' name='B4b'>B4b</a>		public void paint( Graphics g ) {
 			super.paint( g );	
 			if ( this.time &lt;= 0 ) {
@@ -244,9 +247,10 @@
 	{
 <a href='javascript:history.back();' name='P1b'>P1b</a>		public BulletDodgePanel( CollidableObject character, final String imageBomb ) {
 <a href='javascript:history.back();' name='P11'>P11</a>			super( character, imageBomb );
-			setPreferredSize( new Dimension( width, height+40 ) );
+			setPreferredSize( new Dimension( width, height + CollidableObject.IMGSIZE ) );
 <a href='javascript:history.back();' name='P1e'>P1e</a>		}
 	
+		@Override
 <a href='javascript:history.back();' name='P2b'>P2b</a>		protected void update() {
 			for ( CollidableObject bomb : bombs )
 <a href='javascript:history.back();' name='P21'>P21</a>				bomb.move();
@@ -284,6 +288,7 @@
 			this.directionY = STOP;
 <a href='javascript:history.back();' name='K1e'>K1e</a>		}
 	
+		@Override
 <a href='javascript:history.back();' name='K2b'>K2b</a>		public void keyPressed( KeyEvent event ) {
 			switch( event.getKeyCode() ) {
 			case KeyEvent.VK_ESCAPE:
@@ -304,6 +309,7 @@
 			}
 <a href='javascript:history.back();' name='K2e'>K2e</a>		}
 		
+		@Override
 <a href='javascript:history.back();' name='K3b'>K3b</a>		public void keyReleased( KeyEvent event ) {
 			switch( event.getKeyCode() ) {
 			case KeyEvent.VK_LEFT: case 'A': case 'a':
@@ -355,7 +361,7 @@
 	public class CollidableObject extends ObjectByKey 
 	{
 <a href='javascript:history.back();' name='C1b'>C1b</a>		public CollidableObject( final String image, int x, int y, int width, int height ) {
-<a href='javascript:history.back();' name='C11'>C11</a>			super( image, x, y, 0, 20, width, height );
+<a href='javascript:history.back();' name='C11'>C11</a>			super( image, x, y, 0, 40, width, height );
 <a href='javascript:history.back();' name='C1e'>C1e</a>		}		
 <a href='javascript:history.back();' name='C2b'>C2b</a>		public CollidableObject( int directionX, int directionY, final String image, int width, int height ) {
 <a href='javascript:history.back();' name='C21'>C21</a>			this( image, 0, 40, width, height );
@@ -365,10 +371,11 @@
 				this.x = (int)( Math.random() * this.maxX );
 			}
 			else if ( ( directionX == RIGHT ) && ( directionY == STOP ) ) {
-				this.y = 40 + (int)( Math.random() * ( this.maxY-40 ) );
+				this.y = IMGSIZE + (int)( Math.random() * ( this.maxY - IMGSIZE ) );
 			}
 <a href='javascript:history.back();' name='C2e'>C2e</a>		}	
 		
+		@Override
 <a href='javascript:history.back();' name='C3b'>C3b</a>		public void move( int directionX, int directionY ) {
 			final int SPEED = 20;
 <a href='javascript:history.back();' name='C31'>C31</a>			super.move( directionX * SPEED, directionY * SPEED );

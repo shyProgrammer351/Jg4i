@@ -21,7 +21,7 @@
 
 </pre><pre id="code2" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('2')">2			BombDodgePanel panel =
 </pre><pre id="code3" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('3')">3			                       new BombDodgePanel(
-</pre><pre id="code4" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('4')">4			                                           new CollidableObject( imagePath+"character.png", WIDTH/2, HEIGHT-40, WIDTH, HEIGHT ), imagePath+"bomb.png" );
+</pre><pre id="code4" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('4')">4			                                           new CollidableObject( imagePath+"character.png", WIDTH/2, HEIGHT-CollidableObject.IMGSIZE, WIDTH, HEIGHT ), imagePath+"bomb.png" );
 </pre><pre id="code0" class="unselectable codeClass">			JFrame frame = new JFrame ( "폭탄 피하기 게임" );
 </pre><pre id="code0" class="unselectable codeClass">			frame.getContentPane().add( panel );
 </pre><pre id="code0" class="unselectable codeClass">			frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
@@ -62,6 +62,7 @@
 </pre><pre id="codeV31" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('V31')">V31			character.move();
 </pre><pre id="codeV3e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('V3e')">V3e		}
 </pre><pre id="code0" class="unselectable codeClass">		
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre><pre id="codeV4b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('V4b')">V4b		public void paint( Graphics g ){
 </pre><pre id="code0" class="unselectable codeClass">			super.paint( g );
 </pre><pre id="codeV41" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('V41')">V41			character.paint( g );
@@ -89,9 +90,10 @@
 </pre><pre id="code0" class="unselectable codeClass">			this.height= character.backgroundHeight();
 </pre><pre id="code0" class="unselectable codeClass">			this.time = 300;
 </pre><pre id="code0" class="unselectable codeClass">			setBackground( Color.white );
-</pre><pre id="code0" class="unselectable codeClass">			setPreferredSize( new Dimension( width+40, height ) );
+</pre><pre id="code0" class="unselectable codeClass">			setPreferredSize( new Dimension( width + CollidableObject.IMGSIZE, height ) );
 </pre><pre id="codeB1e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B1e')">B1e		}
 
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre><pre id="codeB2b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B2b')">B2b		protected void update() {
 </pre><pre id="code0" class="unselectable codeClass">			for ( CollidableObject bomb : bombs )
 </pre><pre id="codeB21" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B21')">B21				bomb.move();
@@ -117,6 +119,7 @@
 </pre><pre id="code0" class="unselectable codeClass">			}
 </pre><pre id="codeB3e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B3e')">B3e		}
 </pre><pre id="code0" class="unselectable codeClass">		
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre><pre id="codeB4b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('B4b')">B4b		public void paint( Graphics g ) {
 </pre><pre id="code0" class="unselectable codeClass">			super.paint( g );
 </pre><pre id="code0" class="unselectable codeClass">			if ( this.time &lt;= 0 ) {
@@ -185,6 +188,7 @@
 </pre><pre id="code0" class="unselectable codeClass">			this.directionY = STOP;
 </pre><pre id="codeK1e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('K1e')">K1e		}
 
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre><pre id="codeK2b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('K2b')">K2b		public void keyPressed( KeyEvent event ) {
 </pre><pre id="code0" class="unselectable codeClass">			switch( event.getKeyCode() ) {
 </pre><pre id="code0" class="unselectable codeClass">			case KeyEvent.VK_ESCAPE:
@@ -205,6 +209,7 @@
 </pre><pre id="code0" class="unselectable codeClass">			}
 </pre><pre id="codeK2e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('K2e')">K2e		}
 </pre><pre id="code0" class="unselectable codeClass">		
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre><pre id="codeK3b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('K3b')">K3b		public void keyReleased( KeyEvent event ) {
 </pre><pre id="code0" class="unselectable codeClass">			switch( event.getKeyCode() ) {
 </pre><pre id="code0" class="unselectable codeClass">			case KeyEvent.VK_LEFT: case 'A': case 'a':
@@ -257,7 +262,7 @@
 </pre><pre id="code0" class="unselectable codeClass">	public class CollidableObject extends ObjectByKey
 </pre><pre id="code0" class="unselectable codeClass">	{
 </pre><pre id="codeC1b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('C1b')">C1b		public CollidableObject( final String image, int x, int y, int width, int height ) {
-</pre><pre id="codeC11" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('C11')">C11			super( image, x, y, 0, 20, width, height );
+</pre><pre id="codeC11" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('C11')">C11			super( image, x, y, 0, 40, width, height );
 </pre><pre id="codeC1e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('C1e')">C1e		}
 </pre><pre id="codeC2b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('C2b')">C2b		public CollidableObject( int directionX, int directionY, final String image, int width, int height ) {
 </pre><pre id="codeC21" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('C21')">C21			this( image, 0, 40, width, height );
@@ -267,10 +272,11 @@
 </pre><pre id="code0" class="unselectable codeClass">				this.x = (int)( Math.random() * this.maxX );
 </pre><pre id="code0" class="unselectable codeClass">			}
 </pre><pre id="code0" class="unselectable codeClass">			else if ( ( directionX == RIGHT ) && ( directionY == STOP ) ) {
-</pre><pre id="code0" class="unselectable codeClass">				this.y = 40 + (int)( Math.random() * ( this.maxY-40 ) );
+</pre><pre id="code0" class="unselectable codeClass">				this.y = IMGSIZE + (int)( Math.random() * ( this.maxY - IMGSIZE ) );
 </pre><pre id="code0" class="unselectable codeClass">			}
 </pre><pre id="codeC2e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('C2e')">C2e		}
 </pre><pre id="code0" class="unselectable codeClass">		
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre><pre id="codeC3b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('C3b')">C3b		public void move( int directionX, int directionY ) {
 </pre><pre id="code0" class="unselectable codeClass">			final int SPEED = 20;
 </pre><pre id="codeC31" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('C31')">C31			super.move( directionX * SPEED, directionY * SPEED );

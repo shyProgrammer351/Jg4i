@@ -3,8 +3,9 @@
 <img width="150" src = "https://shyprogrammer351.github.io/ig3i/move/bulletDodge_3.jpg" >
 <img width="150" src = "https://shyprogrammer351.github.io/ig3i/move/bulletDodge_4.jpg" >
 <pre> 
-</pre><br> 	  				<h4>알고리즘</h4> 				<pre style='white-space:normal;'> 뷰 패널 <br> &nbsp; &nbsp;키리스너에 방향키로 이동하는 캐릭터를 등록 <br> &nbsp; &nbsp;주기적으로 활성화되는 타이머 등록 <br> &nbsp; &nbsp;&nbsp; &nbsp;최신 정보 업데이트 <br> &nbsp; &nbsp;&nbsp; &nbsp;화면 출력 <br> <br> 폭탄 피하기 패널 <br> &nbsp; &nbsp;최신 정보 업데이트 <br> &nbsp; &nbsp;&nbsp; &nbsp;모든 폭탄은 아래로 떨어지며, 일정 시간마다 새 폭탄을 투하 <br> &nbsp; &nbsp;&nbsp; &nbsp;캐릭터와 폭탄이 충돌하면 캐릭터 HP 감소 <br> &nbsp; &nbsp;화면 출력 <br> &nbsp; &nbsp;&nbsp; &nbsp;먼저, 제한시간동안 폭탄을 피해 살아남으면 성공 출력 <br> &nbsp; &nbsp;&nbsp; &nbsp;또는, HP가 더 이상 없으면 실패 출력 <br> &nbsp; &nbsp;&nbsp; &nbsp;아니면, 캐릭터 및 폭탄의 현재 게임 상황 출력 <br> <br> 총알 피하기 패널 <br> &nbsp; &nbsp;최신 정보 업데이트 <br> &nbsp; &nbsp;&nbsp; &nbsp;모든 총알은 오른쪽으로 이동하며, 일정 시간마다 새 총알을 발사 <br> <br> 방향키로 이동하는 객체 <br> &nbsp; &nbsp;키를 누르면 상하좌우 이동방향 설정 <br> &nbsp; &nbsp;키를 해제하면 이동방향 해제 <br> &nbsp; &nbsp;이동 허용 범위내에서만 객체 이동 <br> <br> 충돌가능한 객체 <br> &nbsp; &nbsp;폭탄 초기화 : 위쪽(임의위치)에서 아래쪽으로 폭탄을 투하 <br> &nbsp; &nbsp;총알 초기화 : 왼쪽(임의위치)에서 오른쪽으로 총알을 발사 <br> &nbsp; &nbsp;다른 객체와 충돌하거나 이동 허용 범위를 벗어나는지 여부 확인 <br></pre> 				<br><br>&nbsp; <span style='font-family:arial; font-size:14px;'>이미지: 캐릭터, 총알 </span>  <br><br>&nbsp; 
-<img src='https://shyprogrammer351.github.io/ig3i/move/bullet_image.jpg' width='150'> <br><br>&nbsp; <span style='font-family:arial; font-size:14px;'>총알 피하기 게임의 클래스 다이어그램</span>  <br>&nbsp; 
+</pre><br> 	  				<h4>알고리즘</h4> 				<pre style='white-space:normal;'> 뷰 패널 <br> &nbsp; &nbsp;키리스너에 방향키로 이동하는 캐릭터를 등록 <br> &nbsp; &nbsp;주기적으로 활성화되는 타이머 등록 <br> &nbsp; &nbsp;&nbsp; &nbsp;최신 정보 업데이트 <br> &nbsp; &nbsp;&nbsp; &nbsp;화면 출력 <br> <br> 폭탄 피하기 패널 <br> &nbsp; &nbsp;최신 정보 업데이트 <br> &nbsp; &nbsp;&nbsp; &nbsp;모든 폭탄은 아래로 떨어지며, 주기적으로 새 폭탄을 투하 <br> &nbsp; &nbsp;&nbsp; &nbsp;캐릭터는 좌우로 이동하고 HP 업데이트 <br> &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;캐릭터와 폭탄이 충돌하면 캐릭터 HP 감소 <br> &nbsp; &nbsp;화면 출력 <br> &nbsp; &nbsp;&nbsp; &nbsp;먼저, 제한시간동안 폭탄을 피해 살아남으면 성공 출력 <br> &nbsp; &nbsp;&nbsp; &nbsp;또는, HP가 더 이상 없으면 실패 출력 <br> &nbsp; &nbsp;&nbsp; &nbsp;아니면, 캐릭터 및 폭탄의 현재 게임 상황 출력 <br> <br> 총알 피하기 패널 <br> &nbsp; &nbsp;최신 정보 업데이트 <br> &nbsp; &nbsp;&nbsp; &nbsp;모든 총알은 오른쪽으로 이동하며, 주기적으로 새 총알을 발사 <br> &nbsp; &nbsp;&nbsp; &nbsp;캐릭터는 상하로 이동하고 HP 업데이트 <br> <br> 방향키로 이동하는 객체 <br> &nbsp; &nbsp;키를 누르면 상하좌우 이동방향 설정 <br> &nbsp; &nbsp;키를 해제하면 이동방향 해제 <br> &nbsp; &nbsp;이동 허용 범위내에서만 객체 이동 <br> <br> 충돌가능한 객체 <br> &nbsp; &nbsp;폭탄 초기화 : 위쪽(임의위치)에서 아래쪽으로 폭탄을 투하 <br> &nbsp; &nbsp;총알 초기화 : 왼쪽(임의위치)에서 오른쪽으로 총알을 발사 <br> &nbsp; &nbsp;다른 객체와 충돌하거나 이동 허용 범위를 벗어나는지 여부 확인 <br></pre> 				<br><br>&nbsp; <span style='font-family:arial; font-size:14px;'>이미지: 캐릭터, 총알 </span>  <br><br>&nbsp; 
+<img src='https://shyprogrammer351.github.io/ig3i/move/bullet_image.jpg' width='150'> <br><br>&nbsp; <span style='font-family:arial; font-size:14px;'>총알 피하기 게임의 클래스 다이어그램</span>  <br><br>&nbsp; 
+<img src='https://shyprogrammer351.github.io/ig3i/move/outline_bulletDodgeGame.jpg' width='500'> <br><br>&nbsp; 
 <img src='https://shyprogrammer351.github.io/ig3i/move/sequence_bulletDodgeGame.jpg' width='500'> <br>&nbsp; <span style='font-family:arial; font-size:14px;'>총알 피하기 게임의 초기화 과정</span>  <br><br>&nbsp; 
 <img src='https://shyprogrammer351.github.io/ig3i/move/sequence_bulletDodgeGame_init.jpg' width='500'> <br><br>&nbsp; <span style='font-family:arial; font-size:14px;'>총알 피하기 게임에서 방향키 입력시 처리 과정</span>   <br><br>&nbsp; 
 <img src='https://shyprogrammer351.github.io/ig3i/move/sequence_bulletDodgeGame_keyPressed.jpg' width='500'> <br><br>&nbsp; <span style='font-family:arial; font-size:14px;'>총알 피하기 게임에서 주기적으로 화면 업데이트 과정</span> <br><br>&nbsp; 
@@ -35,7 +36,7 @@
 </pre>
 <pre id="code3" class="unselectable codeClass">3			                         new BulletDodgePanel(
 </pre>
-<pre id="code4" class="unselectable codeClass">4			                                               new CollidableObject( imagePath+"character.png", WIDTH-40, HEIGHT/2, WIDTH, HEIGHT ), imagePath+"bullet.png" );
+<pre id="code4" class="unselectable codeClass">4			                                               new CollidableObject( imagePath+"character.png", WIDTH-CollidableObject.IMGSIZE, HEIGHT/2, WIDTH, HEIGHT ), imagePath+"bullet.png" );
 </pre><pre id="code0" class="unselectable codeClass">			JFrame frame = new JFrame ( "총알 피하기 게임" );
 </pre><pre id="code0" class="unselectable codeClass">			frame.getContentPane().add( panel );
 </pre><pre id="code0" class="unselectable codeClass">			frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
@@ -93,6 +94,7 @@
 <pre id="codeV3e" class="unselectable codeClass">V3e		}
 </pre><pre id="code0" class="unselectable codeClass">		 
 </pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 화면 출력 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre>
 <pre id="codeV4b" class="unselectable codeClass">V4b		public void paint( Graphics g ){
 </pre><pre id="code0" class="unselectable codeClass">			super.paint( g );
@@ -127,14 +129,15 @@
 </pre><pre id="code0" class="unselectable codeClass">			this.height= character.backgroundHeight();
 </pre><pre id="code0" class="unselectable codeClass">			this.time = 300;
 </pre><pre id="code0" class="unselectable codeClass">			setBackground( Color.white );
-</pre><pre id="code0" class="unselectable codeClass">			setPreferredSize( new Dimension( width+40, height ) );
+</pre><pre id="code0" class="unselectable codeClass">			setPreferredSize( new Dimension( width + CollidableObject.IMGSIZE, height ) );
 </pre>
 <pre id="codeB1e" class="unselectable codeClass">B1e		}
 </pre><pre id="code0" class="unselectable codeClass">	 
 </pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 최신 정보 업데이트  </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre>
 <pre id="codeB2b" class="unselectable codeClass">B2b		protected void update() {
-</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 모든 폭탄은 아래로 떨어지며, 일정 시간마다 새 폭탄을 투하 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 모든 폭탄은 아래로 떨어지며, 주기적으로 새 폭탄을 투하 </b></font>
 </pre><pre id="code0" class="unselectable codeClass">			for ( CollidableObject bomb : bombs )
 </pre>
 <pre id="codeB21" class="unselectable codeClass">B21				bomb.move();
@@ -142,7 +145,7 @@
 </pre><pre id="code0" class="unselectable codeClass">				bombs.add( new CollidableObject( CollidableObject.STOP, CollidableObject.DOWN, imageBomb, width, height ) );
 </pre><pre id="code0" class="unselectable codeClass">			}
 </pre><pre id="code0" class="unselectable codeClass">			 
-</pre><pre id="code0" class="unselectable codeClass">			<font color="green">// 캐릭터는 이동하고 HP 업데이트</font>
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 캐릭터는 좌우로 이동하고 HP 업데이트 </b></font>
 </pre>
 <pre id="codeB22" class="unselectable codeClass">B22			character.move( character.directionX(), CollidableObject.STOP );
 </pre>
@@ -170,6 +173,7 @@
 <pre id="codeB3e" class="unselectable codeClass">B3e		}
 </pre><pre id="code0" class="unselectable codeClass">		 
 </pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 화면 출력  </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre>
 <pre id="codeB4b" class="unselectable codeClass">B4b		public void paint( Graphics g ) {
 </pre><pre id="code0" class="unselectable codeClass">			super.paint( g );
@@ -231,14 +235,15 @@
 <pre id="codeP1b" class="unselectable codeClass">P1b		public BulletDodgePanel( CollidableObject character, final String imageBomb ) {
 </pre>
 <pre id="codeP11" class="unselectable codeClass">P11			super( character, imageBomb );
-</pre><pre id="code0" class="unselectable codeClass">			setPreferredSize( new Dimension( width, height+40 ) );
+</pre><pre id="code0" class="unselectable codeClass">			setPreferredSize( new Dimension( width, height + CollidableObject.IMGSIZE ) );
 </pre>
 <pre id="codeP1e" class="unselectable codeClass">P1e		}
 </pre><pre id="code0" class="unselectable codeClass">	 
 </pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 최신 정보 업데이트  </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre>
 <pre id="codeP2b" class="unselectable codeClass">P2b		protected void update() {
-</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 모든 총알은 오른쪽으로 이동하며, 일정 시간마다 새 총알을 발사  </b></font>
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 모든 총알은 오른쪽으로 이동하며, 주기적으로 새 총알을 발사  </b></font>
 </pre><pre id="code0" class="unselectable codeClass">			for ( CollidableObject bomb : bombs )
 </pre>
 <pre id="codeP21" class="unselectable codeClass">P21				bomb.move();
@@ -246,7 +251,7 @@
 </pre><pre id="code0" class="unselectable codeClass">				bombs.add( new CollidableObject( CollidableObject.RIGHT, CollidableObject.STOP, imageBomb, width, height ) );
 </pre><pre id="code0" class="unselectable codeClass">			}
 </pre><pre id="code0" class="unselectable codeClass">			 
-</pre><pre id="code0" class="unselectable codeClass">			<font color="green">// 캐릭터는 이동하고 HP 업데이트</font>
+</pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 캐릭터는 상하로 이동하고 HP 업데이트 </b></font>
 </pre>
 <pre id="codeP22" class="unselectable codeClass">P22			character.move( CollidableObject.STOP, character.directionY() );
 </pre>
@@ -287,6 +292,7 @@
 <pre id="codeK1e" class="unselectable codeClass">K1e		}
 </pre><pre id="code0" class="unselectable codeClass">	 
 </pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 키를 누르면 상하좌우 이동방향 설정 </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre>
 <pre id="codeK2b" class="unselectable codeClass">K2b		public void keyPressed( KeyEvent event ) {
 </pre><pre id="code0" class="unselectable codeClass">			switch( event.getKeyCode() ) {
@@ -312,6 +318,7 @@
 <pre id="codeK2e" class="unselectable codeClass">K2e		}
 </pre><pre id="code0" class="unselectable codeClass">		 
 </pre><pre id="code0" class="unselectable codeClass">		<font color="green">//<b> 키를 해제하면 이동방향 해제   </b></font>
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre>
 <pre id="codeK3b" class="unselectable codeClass">K3b		public void keyReleased( KeyEvent event ) {
 </pre><pre id="code0" class="unselectable codeClass">			switch( event.getKeyCode() ) {
@@ -381,7 +388,7 @@
 </pre>
 <pre id="codeC1b" class="unselectable codeClass">C1b		public CollidableObject( final String image, int x, int y, int width, int height ) {
 </pre>
-<pre id="codeC11" class="unselectable codeClass">C11			super( image, x, y, 0, 20, width, height );
+<pre id="codeC11" class="unselectable codeClass">C11			super( image, x, y, 0, 40, width, height );
 </pre>
 <pre id="codeC1e" class="unselectable codeClass">C1e		}
 </pre>
@@ -396,12 +403,13 @@
 </pre><pre id="code0" class="unselectable codeClass">			}
 </pre><pre id="code0" class="unselectable codeClass">			<font color="green">//<b> 총알 초기화 : 왼쪽(임의위치)에서 오른쪽으로 총알을 발사 </b></font>
 </pre><pre id="code0" class="unselectable codeClass">			else if ( ( directionX == RIGHT ) && ( directionY == STOP ) ) {
-</pre><pre id="code0" class="unselectable codeClass">				this.y = 40 + (int)( Math.random() * ( this.maxY-40 ) );
+</pre><pre id="code0" class="unselectable codeClass">				this.y = IMGSIZE + (int)( Math.random() * ( this.maxY - IMGSIZE ) );
 </pre><pre id="code0" class="unselectable codeClass">			}
 </pre>
 <pre id="codeC2e" class="unselectable codeClass">C2e		}
 </pre><pre id="code0" class="unselectable codeClass">		 
 </pre><pre id="code0" class="unselectable codeClass">		<font color="green">// 일정 속도로 위치 이동</font>
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre>
 <pre id="codeC3b" class="unselectable codeClass">C3b		public void move( int directionX, int directionY ) {
 </pre><pre id="code0" class="unselectable codeClass">			final int SPEED = 20;

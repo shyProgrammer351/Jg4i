@@ -143,6 +143,7 @@
 <a href='javascript:history.back();' name='V31'>V31</a>			character.move();
 <a href='javascript:history.back();' name='V3e'>V3e</a>		}
 		
+		@Override
 <a href='javascript:history.back();' name='V4b'>V4b</a>		public void paint( Graphics g ){
 			super.paint( g );
 <a href='javascript:history.back();' name='V41'>V41</a>			character.paint( g );
@@ -162,6 +163,7 @@
 <a href='javascript:history.back();' name='S11'>S11</a>			super( map, x, y, imagePath );
 <a href='javascript:history.back();' name='S1e'>S1e</a>		}	
 	
+		@Override
 <a href='javascript:history.back();' name='S2b'>S2b</a>		public void keyPressed( KeyEvent event ) {
 <a href='javascript:history.back();' name='S21'>S21</a>			super.keyPressed( event );
 			switch( event.getKeyCode() ) {
@@ -183,11 +185,13 @@
 <a href='javascript:history.back();' name='S31'>S31</a>			move( directionX, UP*JUMP_HEIGHT );
 <a href='javascript:history.back();' name='S3e'>S3e</a>		}
 		
+		@Override
 <a href='javascript:history.back();' name='S4b'>S4b</a>		public void move( int directionX, int directionY ) {
 			for(; ( map[y+directionY][x+directionX] != WALL ) && ( map[y+directionY+1][x+directionX] != WALL ); directionY++ );
 <a href='javascript:history.back();' name='S41'>S41</a>			super.move( directionX, directionY );
 <a href='javascript:history.back();' name='S4e'>S4e</a>		}
 	
+		@Override
 <a href='javascript:history.back();' name='S5b'>S5b</a>		public void paint( Graphics g ){
 			for( int y = this.y - SCOPE, y2 = 0; y &lt;= this.y + SCOPE; y++, y2++ ){
 				for( int x = this.x - SCOPE, x2 = 0; x &lt;= this.x + SCOPE; x++, x2++ ){
@@ -201,9 +205,11 @@
 			}
 <a href='javascript:history.back();' name='S5e'>S5e</a>		}
 		
+		@Override
 		public int backgroundWidth(){
 			return IMGSIZE * ( 2*SCOPE + 1 );
 		}
+		@Override
 		public int backgroundHeight(){
 			return IMGSIZE * ( 2*SCOPE + 1 );
 		}
@@ -229,11 +235,13 @@
 			this.image[CHARACTER] = new ImageIcon( imagePath + "character.png" ).getImage();
 <a href='javascript:history.back();' name='T1e'>T1e</a>		}
 		
+		@Override
 <a href='javascript:history.back();' name='T2b'>T2b</a>		public void move( int directionX, int directionY ) {
 			if( map[y+directionY][x+directionX] != WALL )
 <a href='javascript:history.back();' name='T21'>T21</a>				super.move( directionX, directionY );
 <a href='javascript:history.back();' name='T2e'>T2e</a>		}
 	
+		@Override
 <a href='javascript:history.back();' name='T3b'>T3b</a>		public void paint( Graphics g ){
 			for( int y = 0; y &lt;= map.length; y++ ){
 				for( int x = 0; x &lt;= map[0].length; x++ ){
@@ -247,9 +255,11 @@
 			}
 <a href='javascript:history.back();' name='T3e'>T3e</a>		}
 		
+		@Override
 		public int backgroundWidth(){
 			return IMGSIZE * ( map[0].length );
 		}
+		@Override
 		public int backgroundHeight(){
 			return IMGSIZE * ( map.length );
 		}
@@ -280,6 +290,7 @@
 			this.directionY = STOP;
 <a href='javascript:history.back();' name='K1e'>K1e</a>		}
 	
+		@Override
 <a href='javascript:history.back();' name='K2b'>K2b</a>		public void keyPressed( KeyEvent event ) {
 			switch( event.getKeyCode() ) {
 			case KeyEvent.VK_ESCAPE:
@@ -300,6 +311,7 @@
 			}
 <a href='javascript:history.back();' name='K2e'>K2e</a>		}
 		
+		@Override
 <a href='javascript:history.back();' name='K3b'>K3b</a>		public void keyReleased( KeyEvent event ) {
 			switch( event.getKeyCode() ) {
 			case KeyEvent.VK_LEFT: case 'A': case 'a':

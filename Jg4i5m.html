@@ -197,6 +197,7 @@
 			add( lblVolume );
 <a href='javascript:history.back();' name='T1e'>T1e</a>		}
 		
+		@Override
 <a href='javascript:history.back();' name='T2b'>T2b</a>		public void clickPower() {
 			if( power == OFF ) {
 				power = ON;
@@ -214,6 +215,7 @@
 			}
 <a href='javascript:history.back();' name='T2e'>T2e</a>		}	
 		
+		@Override
 <a href='javascript:history.back();' name='T3b'>T3b</a>		public void clickUp() {				
 			if( power == ON ) {
 				channel = ( channel + 1 ) % ( imgChannel.length - 1 );
@@ -221,6 +223,7 @@
 			}
 <a href='javascript:history.back();' name='T3e'>T3e</a>		}				
 		
+		@Override
 <a href='javascript:history.back();' name='T4b'>T4b</a>		public void clickDown() {			
 			if( power == ON ) {
 				channel = ( channel + ( imgChannel.length - 2 ) ) % ( imgChannel.length - 1 );
@@ -228,6 +231,7 @@
 			}
 <a href='javascript:history.back();' name='T4e'>T4e</a>		}				
 		
+		@Override
 <a href='javascript:history.back();' name='T5b'>T5b</a>		public void clickLeft() {				
 			if( power == ON ) {
 				volume = ( volume + ( imgVolume.length - 1 ) ) % imgVolume.length;
@@ -235,6 +239,7 @@
 			}
 <a href='javascript:history.back();' name='T5e'>T5e</a>		}				
 		
+		@Override
 <a href='javascript:history.back();' name='T6b'>T6b</a>		public void clickRight() {
 			if( power == ON ) {
 				volume = ( volume + 1 ) % imgVolume.length;

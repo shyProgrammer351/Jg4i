@@ -64,6 +64,7 @@ public <input id='blank1' type='text' style='background-color:Silver; border:0px
 		character.move(); 
 	} 
 	 
+	@Override 
 	public void <input id='blank9' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='5' onchange='sP3f6(9)'>( Graphics g ){ 
 		<input id='blank10' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='5' onchange='sP3f6(10)'>.<input id='blank11' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='5' onchange='sP3f6(11)'>( g ); 
 		character.<input id='blank12' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='5' onchange='sP3f6(12)'>( g ); 
@@ -89,11 +90,13 @@ public <input id='blank13' type='text' style='background-color:Silver; border:0p
 		<input id='blank26' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='4' onchange='sP3f6(26)'>.image[CHARACTER] = new <input id='blank27' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='9' onchange='sP3f6(27)'>( imagePath + "character.png" ).<input id='blank28' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='8' onchange='sP3f6(28)'>(); 
 	} 
 	 
+	@Override 
 	public void move( int directionX, int directionY ) { 
 		if( map[y+directionY][x+directionX] != WALL ) 
 			<input id='blank29' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='5' onchange='sP3f6(29)'>.move( directionX, directionY ); 
 	} 
  
+	@Override 
 	public void <input id='blank30' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='5' onchange='sP3f6(30)'>( Graphics g ){ 
 		for( int y = 0; y &lt;= map.length; y++ ){ 
 			for( int x = 0; x &lt;= map[0].length; x++ ){ 
@@ -107,9 +110,11 @@ public <input id='blank13' type='text' style='background-color:Silver; border:0p
 		} 
 	} 
 	 
+	@Override 
 	public int backgroundWidth(){ 
 		return IMGSIZE * ( map[0].length ); 
 	} 
+	@Override 
 	public int backgroundHeight(){ 
 		return IMGSIZE * ( map.length ); 
 	} 
@@ -139,6 +144,7 @@ public <input id='blank34' type='text' style='background-color:Silver; border:0p
 		<input id='blank48' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='4' onchange='sP3f6(48)'>.directionY = STOP; 
 	} 
  
+	@Override 
 	public void <input id='blank49' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='10' onchange='sP3f6(49)'>( <input id='blank50' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='8' onchange='sP3f6(50)'> event ) { 
 		switch( event.<input id='blank51' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='10' onchange='sP3f6(51)'>() ) { 
 		case <input id='blank52' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='8' onchange='sP3f6(52)'>.VK_ESCAPE: 
@@ -159,6 +165,7 @@ public <input id='blank34' type='text' style='background-color:Silver; border:0p
 		} 
 	} 
 	 
+	@Override 
 	public void <input id='blank57' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='11' onchange='sP3f6(57)'>( <input id='blank58' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='8' onchange='sP3f6(58)'> event ) { 
 		switch( event.<input id='blank59' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='10' onchange='sP3f6(59)'>() ) { 
 		case <input id='blank60' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='8' onchange='sP3f6(60)'>.VK_LEFT: case 'A': case 'a': 

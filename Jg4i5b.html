@@ -110,6 +110,7 @@ public <input id='blank52' type='text' style='background-color:Silver; border:0p
 		<input id='blank69' type='text' style='background-color:Silver; border:0px;' required minlength='1' maxlength='30' size='3' onchange='sP3f6(69)'>( lblVolume ); 
 	} 
 	 
+	@Override 
 	public void clickPower() { 
 		if( power == OFF ) { 
 			power = ON; 
@@ -127,6 +128,7 @@ public <input id='blank52' type='text' style='background-color:Silver; border:0p
 		} 
 	}	 
 	 
+	@Override 
 	public void clickUp() {				 
 		if( power == ON ) { 
 			channel = ( channel + 1 ) % ( imgChannel.length - 1 ); 
@@ -134,6 +136,7 @@ public <input id='blank52' type='text' style='background-color:Silver; border:0p
 		} 
 	}				 
 	 
+	@Override 
 	public void clickDown() {			 
 		if( power == ON ) { 
 			channel = ( channel + ( imgChannel.length - 2 ) ) % ( imgChannel.length - 1 ); 
@@ -141,6 +144,7 @@ public <input id='blank52' type='text' style='background-color:Silver; border:0p
 		} 
 	}				 
 	 
+	@Override 
 	public void clickLeft() {				 
 		if( power == ON ) { 
 			volume = ( volume + ( imgVolume.length - 1 ) ) % imgVolume.length; 
@@ -148,6 +152,7 @@ public <input id='blank52' type='text' style='background-color:Silver; border:0p
 		} 
 	}				 
 	 
+	@Override 
 	public void clickRight() { 
 		if( power == ON ) { 
 			volume = ( volume + 1 ) % imgVolume.length; 

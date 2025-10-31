@@ -123,6 +123,7 @@
 </pre><pre id="code0" class="unselectable codeClass">			add( lblVolume );
 </pre><pre id="codeT1e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('T1e')">T1e		}
 </pre><pre id="code0" class="unselectable codeClass">		
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre><pre id="codeT2b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('T2b')">T2b		public void clickPower() {
 </pre><pre id="code0" class="unselectable codeClass">			if( power == OFF ) {
 </pre><pre id="code0" class="unselectable codeClass">				power = ON;
@@ -140,6 +141,7 @@
 </pre><pre id="code0" class="unselectable codeClass">			}
 </pre><pre id="codeT2e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('T2e')">T2e		}
 </pre><pre id="code0" class="unselectable codeClass">		
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre><pre id="codeT3b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('T3b')">T3b		public void clickUp() {
 </pre><pre id="code0" class="unselectable codeClass">			if( power == ON ) {
 </pre><pre id="code0" class="unselectable codeClass">				channel = ( channel + 1 ) % ( imgChannel.length - 1 );
@@ -147,6 +149,7 @@
 </pre><pre id="code0" class="unselectable codeClass">			}
 </pre><pre id="codeT3e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('T3e')">T3e		}
 </pre><pre id="code0" class="unselectable codeClass">		
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre><pre id="codeT4b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('T4b')">T4b		public void clickDown() {
 </pre><pre id="code0" class="unselectable codeClass">			if( power == ON ) {
 </pre><pre id="code0" class="unselectable codeClass">				channel = ( channel + ( imgChannel.length - 2 ) ) % ( imgChannel.length - 1 );
@@ -154,6 +157,7 @@
 </pre><pre id="code0" class="unselectable codeClass">			}
 </pre><pre id="codeT4e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('T4e')">T4e		}
 </pre><pre id="code0" class="unselectable codeClass">		
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre><pre id="codeT5b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('T5b')">T5b		public void clickLeft() {
 </pre><pre id="code0" class="unselectable codeClass">			if( power == ON ) {
 </pre><pre id="code0" class="unselectable codeClass">				volume = ( volume + ( imgVolume.length - 1 ) ) % imgVolume.length;
@@ -161,6 +165,7 @@
 </pre><pre id="code0" class="unselectable codeClass">			}
 </pre><pre id="codeT5e" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('T5e')">T5e		}
 </pre><pre id="code0" class="unselectable codeClass">		
+</pre><pre id="code0" class="unselectable codeClass">		@Override
 </pre><pre id="codeT6b" class="unselectable codeClass" onmouseover="sP3f8(this.id, true) " onmouseout="sP3f8(this.id, false)" onclick="sP3f7('T6b')">T6b		public void clickRight() {
 </pre><pre id="code0" class="unselectable codeClass">			if( power == ON ) {
 </pre><pre id="code0" class="unselectable codeClass">				volume = ( volume + 1 ) % imgVolume.length;
