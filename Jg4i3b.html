@@ -101,12 +101,12 @@ public <input id='blank15' type='text' style='background-color:Silver; border:0p
 	protected void updateHP() { 
 		for ( int i = 0; i &lt; bombs.size(); i++ ) { 
 			CollidableObject bomb = bombs.get(i); 
-			if ( ( bomb.collide( character ) == true ) ) { 
+			if ( ( bomb.collide( character ) 
+			                                 == true ) ) { 
 				characterHP--; 
 				bombs.remove( bomb ); 
 			} 
-			else if ( ( bomb.collide()  
-			                           == true ) ) { 
+			else if ( ( bomb.collide() == true ) ) { 
 				bombs.remove( bomb ); 
 			} 
 		} 

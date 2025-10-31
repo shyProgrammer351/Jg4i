@@ -59,9 +59,10 @@
 <pre style='margin:0;padding:0;'><a href='#B23'>B23</a>   updateHP();</pre><br>
 
 <pre style='margin:0;padding:0;'><a href='#B3b'>B3b</a>  protected void updateHP() {</pre><br>
-<pre style='margin:0;padding:0;'><a href='#B31'>B31</a>    if ( ( bomb.collide( character ) == true ) ) {</pre><br>
+<pre style='margin:0;padding:0;'><a href='#B31'>B31</a>    if ( ( bomb.collide( character )</pre><br>
 <pre style='margin:0;padding:0;'><a href='#C4b'>C4b</a>  public boolean collide( ObjectByKey that ) {</pre><br>
 <pre style='margin:0;padding:0;'><a href='#C4e'>C4e</a>  }</pre><br>
+<pre style='margin:0;padding:0;'><a href='#B32'>B32</a>                                     == true ) ) {</pre><br>
 <pre style='margin:0;padding:0;'><a href='#B3e'>B3e</a>  }</pre><br>
 <pre style='margin:0;padding:0;'><a href='#B2e'>B2e</a>  }</pre><br>
 <pre style='margin:0;padding:0;'><a href='#V22'>V22</a>                     repaint();</pre><br>
@@ -178,12 +179,12 @@
 <a href='javascript:history.back();' name='B3b'>B3b</a>		protected void updateHP() {
 			for ( int i = 0; i &lt; bombs.size(); i++ ) {
 				CollidableObject bomb = bombs.get(i);
-<a href='javascript:history.back();' name='B31'>B31</a>				if ( ( bomb.collide( character ) == true ) ) {
+<a href='javascript:history.back();' name='B31'>B31</a>				if ( ( bomb.collide( character )
+<a href='javascript:history.back();' name='B32'>B32</a>				                                 == true ) ) {
 					characterHP--;
 					bombs.remove( bomb );
 				}
-				else if ( ( bomb.collide() 
-				                           == true ) ) {
+				else if ( ( bomb.collide() == true ) ) {
 					bombs.remove( bomb );
 				}
 			}

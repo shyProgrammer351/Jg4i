@@ -6,7 +6,7 @@
 </pre><br> 	  				<h4>알고리즘</h4> 				<pre style='white-space:normal;'> 뷰 패널 <br> &nbsp; &nbsp;키리스너에 방향키로 이동하는 캐릭터를 등록 <br> &nbsp; &nbsp;주기적으로 활성화되는 타이머 등록 <br> &nbsp; &nbsp;&nbsp; &nbsp;최신 정보 업데이트 <br> &nbsp; &nbsp;&nbsp; &nbsp;화면 출력 <br> <br> 폭탄 피하기 패널 <br> &nbsp; &nbsp;최신 정보 업데이트 <br> &nbsp; &nbsp;&nbsp; &nbsp;모든 폭탄은 아래로 떨어지며, 주기적으로 새 폭탄을 투하 <br> &nbsp; &nbsp;&nbsp; &nbsp;캐릭터는 좌우로 이동하고 HP 업데이트 <br> &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;캐릭터와 폭탄이 충돌하면 캐릭터 HP 감소 <br> &nbsp; &nbsp;화면 출력 <br> &nbsp; &nbsp;&nbsp; &nbsp;먼저, 제한시간동안 폭탄을 피해 살아남으면 성공 출력 <br> &nbsp; &nbsp;&nbsp; &nbsp;또는, HP가 더 이상 없으면 실패 출력 <br> &nbsp; &nbsp;&nbsp; &nbsp;아니면, 캐릭터 및 폭탄의 현재 게임 상황 출력 <br> <br> 총알 피하기 패널 <br> &nbsp; &nbsp;최신 정보 업데이트 <br> &nbsp; &nbsp;&nbsp; &nbsp;모든 총알은 오른쪽으로 이동하며, 주기적으로 새 총알을 발사 <br> &nbsp; &nbsp;&nbsp; &nbsp;캐릭터는 상하로 이동하고 HP 업데이트 <br> <br> 방향키로 이동하는 객체 <br> &nbsp; &nbsp;키를 누르면 상하좌우 이동방향 설정 <br> &nbsp; &nbsp;키를 해제하면 이동방향 해제 <br> &nbsp; &nbsp;이동 허용 범위내에서만 객체 이동 <br> <br> 충돌가능한 객체 <br> &nbsp; &nbsp;폭탄 초기화 : 위쪽(임의위치)에서 아래쪽으로 폭탄을 투하 <br> &nbsp; &nbsp;총알 초기화 : 왼쪽(임의위치)에서 오른쪽으로 총알을 발사 <br> &nbsp; &nbsp;다른 객체와 충돌하거나 이동 허용 범위를 벗어나는지 여부 확인 <br></pre> 				<br><br>&nbsp; <span style='font-family:arial; font-size:14px;'>이미지: 캐릭터, 총알 </span>  <br><br>&nbsp; 
 <img src='https://shyprogrammer351.github.io/ig3i/move/bullet_image.jpg' width='150'> <br><br>&nbsp; <span style='font-family:arial; font-size:14px;'>총알 피하기 게임의 클래스 다이어그램</span>  <br><br>&nbsp; 
 <img src='https://shyprogrammer351.github.io/ig3i/move/outline_bulletDodgeGame.jpg' width='500'> <br><br>&nbsp; 
-<img src='https://shyprogrammer351.github.io/ig3i/move/sequence_bulletDodgeGame.jpg' width='500'> <br>&nbsp; <span style='font-family:arial; font-size:14px;'>총알 피하기 게임의 초기화 과정</span>  <br><br>&nbsp; 
+<img src='https://shyprogrammer351.github.io/ig3i/move/sequence_bulletDodgeGame.jpg' width='650'> <br>&nbsp; <span style='font-family:arial; font-size:14px;'>총알 피하기 게임의 초기화 과정</span>  <br><br>&nbsp; 
 <img src='https://shyprogrammer351.github.io/ig3i/move/sequence_bulletDodgeGame_init.jpg' width='500'> <br><br>&nbsp; <span style='font-family:arial; font-size:14px;'>총알 피하기 게임에서 방향키 입력시 처리 과정</span>   <br><br>&nbsp; 
 <img src='https://shyprogrammer351.github.io/ig3i/move/sequence_bulletDodgeGame_keyPressed.jpg' width='500'> <br><br>&nbsp; <span style='font-family:arial; font-size:14px;'>총알 피하기 게임에서 주기적으로 화면 업데이트 과정</span> <br><br>&nbsp; 
 <img src='https://shyprogrammer351.github.io/ig3i/move/sequence_bulletDodgeGame_actionPerformed.jpg' width='500'> <br> &nbsp; <br> &nbsp;
@@ -159,13 +159,14 @@
 </pre><pre id="code0" class="unselectable codeClass">			for ( int i = 0; i &lt; bombs.size(); i++ ) {
 </pre><pre id="code0" class="unselectable codeClass">				CollidableObject bomb = bombs.get(i);
 </pre>
-<pre id="codeB31" class="unselectable codeClass">B31				if ( ( bomb.collide( character ) == true ) ) {
+<pre id="codeB31" class="unselectable codeClass">B31				if ( ( bomb.collide( character )
+</pre>
+<pre id="codeB32" class="unselectable codeClass">B32				                                 == true ) ) {
 </pre><pre id="code0" class="unselectable codeClass">					characterHP--;
 </pre><pre id="code0" class="unselectable codeClass">					bombs.remove( bomb );
 </pre><pre id="code0" class="unselectable codeClass">				}
 </pre><pre id="code0" class="unselectable codeClass">				<font color="green">// 이동 허용 범위를 벗어난 폭탄은 제거</font>
-</pre><pre id="code0" class="unselectable codeClass">				else if ( ( bomb.collide()
-</pre><pre id="code0" class="unselectable codeClass">				                           == true ) ) {
+</pre><pre id="code0" class="unselectable codeClass">				else if ( ( bomb.collide() == true ) ) {
 </pre><pre id="code0" class="unselectable codeClass">					bombs.remove( bomb );
 </pre><pre id="code0" class="unselectable codeClass">				}
 </pre><pre id="code0" class="unselectable codeClass">			}

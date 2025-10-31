@@ -158,13 +158,14 @@
 </pre><pre id="code0" class="unselectable codeClass">			for ( int i = 0; i &lt; bombs.size(); i++ ) {
 </pre><pre id="code0" class="unselectable codeClass">				CollidableObject bomb = bombs.get(i);
 </pre>
-<pre id="codeB31" class="unselectable codeClass">B31				if ( ( bomb.collide( character ) == true ) ) {
+<pre id="codeB31" class="unselectable codeClass">B31				if ( ( bomb.collide( character )
+</pre>
+<pre id="codeB32" class="unselectable codeClass">B32				                                 == true ) ) {
 </pre><pre id="code0" class="unselectable codeClass">					characterHP--;
 </pre><pre id="code0" class="unselectable codeClass">					bombs.remove( bomb );
 </pre><pre id="code0" class="unselectable codeClass">				}
 </pre><pre id="code0" class="unselectable codeClass">				<font color="green">// 이동 허용 범위를 벗어난 폭탄은 제거</font>
-</pre><pre id="code0" class="unselectable codeClass">				else if ( ( bomb.collide()
-</pre><pre id="code0" class="unselectable codeClass">				                           == true ) ) {
+</pre><pre id="code0" class="unselectable codeClass">				else if ( ( bomb.collide() == true ) ) {
 </pre><pre id="code0" class="unselectable codeClass">					bombs.remove( bomb );
 </pre><pre id="code0" class="unselectable codeClass">				}
 </pre><pre id="code0" class="unselectable codeClass">			}
